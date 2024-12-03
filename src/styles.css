@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+/* Banner azul con texto alineado a la izquierda */
+.banner {
+    background-color: #1A3C5D;  /* Azul elegante */
+    color: white;
+    text-align: left;  /* Alineación a la izquierda */
+    padding: 20px 40px;
+    margin-bottom: 40px;
+  }
+  
+  .banner-title {
+    font-size: 1.8rem;  /* Título más pequeño */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #FFFFFF;  /* Fondo blanco */
+    color: #333;  /* Gris oscuro para textos */
+    padding: 20px;
+  }
+  
+  /* Contenedor de los productos */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #FFFFFF;  /* Blanco para los productos */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;  /* Tamaño del cuadro de producto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: scale(0.98);  /* Producto se achica cuando el ratón está encima */
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para la descripción y el precio */
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2A4D77;  /* Azul oscuro para el título del producto */
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    color: #B0B0B0;  /* Gris claro para las descripciones */
+    margin-bottom: 20px;
+  }
+  
+  .card-price {
+    font-size: 1.2rem;
+    color: #B58AC6;  /* Lila suave para el precio */
+    font-weight: bold;
+  }
+  
+  /* Estilo para el botón de comprar */
+  button {
+    background-color: #2A4D77;  /* Azul oscuro para el botón */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #1A3C5D;  /* Azul más oscuro al hacer hover */
+  }
+  
+  /* Mensaje de carga */
+  .loading-text {
+    text-align: center;
+    color: #B0B0B0;  /* Gris claro para el texto de "cargando" */
+    font-size: 1.2rem;
+  }
+  

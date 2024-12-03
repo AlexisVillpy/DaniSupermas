@@ -1,0 +1,43 @@
+/* Estilo para el título del catálogo alineado a la izquierda */
+.title {
+  text-align: left;  /* Alineación a la izquierda */
+  color: #2A4D77;  /* Azul oscuro */
+  font-size: 1.5rem;  /* Título más pequeño */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+/* Contenedor del catálogo */
+.catalogo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Estilos para el mensaje de carga */
+.loading-text {
+  text-align: center;
+  color: #B0B0B0;  /* Gris claro para el texto de "cargando" */
+  font-size: 1.2rem;
+}

@@ -1,0 +1,20 @@
+[
+    {
+      "nombre": "Producto 1",
+      "foto": "assets/fotos-productos/82511.png"
+    },
+    {
+      "nombre": "Producto 2",
+      "foto": "assets/fotos-productos/2.jpg"
+    },
+    {
+      "nombre": "Producto 3",
+      "foto": "assets/fotos-productos/3.png"
+    },
+    {
+      "nombre": "Producto 4",
+      "foto": "assets/fotos-productos/4.jpg"
+    }
+  
+  ]
+  
