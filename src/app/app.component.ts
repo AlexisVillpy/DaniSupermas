@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { InicioCatalogoComponent } from './inicio-catalogo/inicio-catalogo.component';  // Importa el componente
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [InicioCatalogoComponent]  // Aquí se importa el componente standalone
 })
 export class AppComponent {
-  title = 'Catalogoilmondo';
+  // Lógica del componente
 }
