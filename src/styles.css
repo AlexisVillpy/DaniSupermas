@@ -1,24 +1,38 @@
-/* Banner azul con texto alineado a la izquierda */
+/* Estilo del banner */
 .banner {
-    background-color: #1A3C5D;  /* Azul elegante */
-    color: white;
-    text-align: left;  /* Alineación a la izquierda */
-    padding: 20px 40px;
-    margin-bottom: 40px;
-  }
-  
-  .banner-title {
-    font-size: 1.8rem;  /* Título más pequeño */
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 0;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background-color: #1d3557;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor del logo con fondo blanco y bordes redondeados */
+
+/* Estilo del logo */
+.logo-container img {
+  max-height: 70px;  /* Ajusta el tamaño del logo */
+  object-fit: contain;
+  margin-top: 15px;
+}
+
+/* Evita que el contenido se superponga al banner */
+.catalogo-container {
+  margin-top: 70px;  /* Aumenta el margen superior */
+}
+
+
   /* Estilos generales */
   body {
     font-family: 'Raleway', sans-serif;
-    background-color: #FFFFFF;  /* Fondo blanco */
+    background-color: #ffffff;  /* Fondo blanco */
     color: #333;  /* Gris oscuro para textos */
     padding: 20px;
   }
@@ -94,3 +108,5 @@
     font-size: 1.2rem;
   }
   
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

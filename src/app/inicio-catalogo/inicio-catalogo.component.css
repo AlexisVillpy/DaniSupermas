@@ -1,43 +1,104 @@
-/* Estilo para el título del catálogo alineado a la izquierda */
-.title {
-  text-align: left;  /* Alineación a la izquierda */
-  color: #2A4D77;  /* Azul oscuro */
-  font-size: 1.5rem;  /* Título más pequeño */
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 40px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));  /* Ajusta el tamaño mínimo */
+  gap: 30px;  /* Aumenta el espacio entre tarjetas */
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;  /* Esto asegura que el contenedor se centre */
 }
 
-/* Contenedor del catálogo */
-.catalogo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
+/* Estilo de la tarjeta del producto */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;  /* Alinea todo el contenido a la izquierda */
+  padding: 10px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* Contenedor de la imagen */
 .image-container {
   width: 100%;
-  height: 210px;
+  height: 150px;  /* Reduce la altura de la imagen */
   overflow: hidden;
 }
 
 .card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;  /* Ajusta la imagen sin recortar */
   transition: transform 0.3s ease;
 }
 
+
 .card:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* Estilos para el mensaje de carga */
-.loading-text {
-  text-align: center;
-  color: #B0B0B0;  /* Gris claro para el texto de "cargando" */
-  font-size: 1.2rem;
+/* Estilo del título del producto */
+.card-title {
+  text-align: center;  /* Centra solo el título */
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+/* Estilo del precio y unidades en gris y con el mismo tamaño */
+.card-price, .card-box {
+  font-size: 0.8rem;  /* Tienen el mismo tamaño */
+  color: #777;  /* Gris suave */
+  margin: 5px 0;
+}
+
+/* Botón */
+/* Estilo del botón */
+.card button {
+  background-color: #3181d2 !important;  /* Azul más vivo */
+  color: white !important;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estado hover del botón */
+.card button:hover {
+  background-color: #115388 !important;  /* Un azul más oscuro para el hover */
+}
+
+/* Estilo del precio y unidades en gris y con el mismo tamaño */
+/* Estilo del precio y unidades en negro y con el mismo tamaño */
+/* Estilo del precio y unidades en negro y con el mismo tamaño */
+.card .card-price, .card .card-box {
+  font-size: 0.8rem;  /* Tienen el mismo tamaño */
+  color: #000 !important;  /* Negro y con prioridad para evitar que otro estilo lo sobrescriba */
+  margin: 5px 0;
+  font-weight: normal;  /* Asegura que no haya un peso de fuente innecesario */
+}
+
+/* Estilo para el título "Catálogo de Productos" */
+/* Estilo para el título "Catálogo de Productos" con fondo degradado */
+.title {
+  font-size: 2rem;  /* Tamaño de fuente grande para hacerlo más llamativo */
+  font-weight: bold;  /* Fuente en negrita */
+  color: white;  /* Color blanco para el texto, asegurando buen contraste con el fondo */
+  text-align: center;  /* Centra el texto horizontalmente */
+  margin: 20px 0;  /* Espacio arriba y abajo del título */
+  padding: 10px 0;  /* Añadir un poco de padding vertical para separarlo del resto */
+  background: linear-gradient(45deg, #2d6cb9, #1d3557);  /* Degradado de azul */
+  border-radius: 8px;  /* Bordes redondeados para un estilo más moderno */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil para darle profundidad */
 }

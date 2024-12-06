@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http'; // Asegúrate de importar HttpClientModule también
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';  // Importa MatIconModule
 
 @Component({
   selector: 'app-inicio-catalogo',
   standalone: true,
   templateUrl: './inicio-catalogo.component.html',
   styleUrls: ['./inicio-catalogo.component.css'],
-  imports: [CommonModule, HttpClientModule]  // Asegúrate de importar HttpClientModule aquí
+  imports: [CommonModule, HttpClientModule, MatIconModule]  // Agrega MatIconModule aquí
 })
 export class InicioCatalogoComponent implements OnInit {
   productos: any[] = [];
@@ -24,7 +25,7 @@ export class InicioCatalogoComponent implements OnInit {
   cargarProductos(): void {
     console.log('Cargando productos...');
     this.http.get<any[]>('/assets/productos.json')
-.subscribe({
+    .subscribe({
       next: (response) => {
         console.log('Respuesta recibida:', response);
         if (response && response.length > 0) {
@@ -41,5 +42,4 @@ export class InicioCatalogoComponent implements OnInit {
       }
     });
   }
-  
-}  
+}
