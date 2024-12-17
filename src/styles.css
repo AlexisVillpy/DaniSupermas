@@ -7,13 +7,13 @@
   height: 75px;
   background-color: #1d3557;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between; /* Separa los elementos del logo principal y las marcas */
   align-items: center;
-  padding-left: 20px;
+  padding: 0 20px;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 110px;
 }
-
 /* Contenedor del logo con fondo blanco y bordes redondeados */
 
 /* Estilo del logo */
@@ -25,7 +25,7 @@
 
 /* Evita que el contenido se superponga al banner */
 .catalogo-container {
-  margin-top: 70px;  /* Aumenta el margen superior */
+  margin-top: 70px; 
 }
 
 
@@ -37,24 +37,6 @@
     padding: 20px;
   }
   
-  /* Contenedor de los productos */
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-  }
-  
-  .card {
-    background-color: #FFFFFF;  /* Blanco para los productos */
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 250px;  /* Tamaño del cuadro de producto */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
   .card:hover {
     transform: scale(0.98);  /* Producto se achica cuando el ratón está encima */
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
@@ -62,14 +44,14 @@
   
   /* Estilos para la descripción y el precio */
   .card-body {
-    padding: 20px;
+    padding: 10px;
   }
   
   .card-title {
     font-size: 1.4rem;
     font-weight: bold;
     color: #2A4D77;  /* Azul oscuro para el título del producto */
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
   .card-description {
@@ -78,11 +60,6 @@
     margin-bottom: 20px;
   }
   
-  .card-price {
-    font-size: 1.2rem;
-    color: #B58AC6;  /* Lila suave para el precio */
-    font-weight: bold;
-  }
   
   /* Estilo para el botón de comprar */
   button {

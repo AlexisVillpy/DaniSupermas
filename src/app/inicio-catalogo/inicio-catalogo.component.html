@@ -1,34 +1,67 @@
 <div class="banner">
-  <!-- Contenedor del logo -->
+  <!-- Contenedor del logo principal -->
   <div class="logo-container">
     <img src="assets/iconos y logos/logoilmondo.png" alt="Logo Ilmondo">
   </div>
+
+  <!-- Contenedor de los logos de marcas -->
+  <div class="brands-container">
+    <img src="../../assets/iconos y logos/coricelli_logo.png" alt="Marca 1" class="brand-logo">
+    <img src="../../assets/iconos y logos/logoBonaroma.png" alt="Marca 2" class="brand-logo">
+    <img src="../../assets/iconos y logos/logoSansebastian.png" alt="Marca 4" class="brand-logo">
+    <img src="../../assets/iconos y logos/okfLogo.png" alt="Marca 5" class="brand-logo">
+    <img src="../../assets/iconos y logos/edelmeister_logo.png" alt="Marca 3" class="brand-logo">
+  </div>
 </div>
 
-<div class="catalogo-container">
-  <h2 class="title">
-    <mat-icon> format_align_justify </mat-icon>
-    <span>&nbsp;</span> 
-     Catálogo de Productos
-  </h2>
-  <!-- Título del catálogo -->
 
-  <div *ngIf="productos.length === 0">
-    <p class="loading-text">Cargando productos...</p>
+<div class="catalogo-container">
+  <!-- Título del catálogo -->
+  <h2 class="title">
+    <mat-icon>format_align_justify</mat-icon>
+    Catálogo de Productos
+  </h2>
+
+  <!-- Contenedor de búsqueda y categorías -->
+  <div class="search-categories-container">
+    <!-- Input de búsqueda -->
+    <div class="search-container">
+      <mat-icon class="search-icon">search</mat-icon>
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (input)="filtrarProductos()"
+        placeholder="Buscar productos..."
+        class="search-input"
+      />
+    </div>
+
+    <!-- Desplegable Categorías -->
+    <div class="dropdown-container">
+      <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
+        <option value="">Todas las categorías</option>
+        <option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria }}</option>
+      </select>
+    </div>
   </div>
 
+  <!-- Mensaje de carga -->
+  <div *ngIf="productosFiltrados.length === 0">
+    <p class="loading-text">No se encontraron productos.</p>
+  </div>
+
+  <!-- Contenedor de tarjetas -->
   <div class="container">
-    <div *ngFor="let producto of productos" class="card">
+    <div *ngFor="let producto of productosFiltrados" class="card">
       <div class="image-container">
         <img [src]="producto.foto" alt="{{ producto.nombre }}" />
       </div>
       <div class="card-body">
         <h3 class="card-title">{{ producto.nombre }}</h3>
-        <p class="card-price">Precio: {{ producto.precio | number }}gs</p>
+        <p class="card-price">Precio: <span class="price-number">{{ producto.precio | number }}</span> <span class="price-currency">gs</span></p>
         <p class="card-box">Unidades/c: {{ producto.caja }}</p>
         <button>Detalle</button>
       </div>
     </div>
   </div>
 </div>
-

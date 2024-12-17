@@ -3,272 +3,332 @@
       "nombre": "ALOE VERA KING DRINK 500ML",
       "foto": "assets/fotos-productos/aloeoriginal.avif",
       "precio": 12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
       "nombre": "ALOE VERA KING PEACH 500ML",
       "foto": "assets/fotos-productos/aloePeach.jpg",
       "precio": 12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "Aloe Vera King Sandia 500ML",
+      "nombre": "ALOE VERA KING SANDIA 500ML",
       "foto": "assets/fotos-productos/aloeSandia.jpg",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "Aloe Vera King mango 500ML",
+      "nombre": "ALOE VERA KING MANGO 500ML",
       "foto": "assets/fotos-productos/aloeMango.png",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "ALOE VERA KING STRAWBERRY 500ML",
+      "nombre": "ALOE VERA KING FRUTILLA 500ML",
       "foto": "assets/fotos-productos/aloeStraw.png",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "COCONUT DRINK 500 ML",
+      "nombre": "COCONUT DRINK ORIGINAL 500ML",
       "foto": "assets/fotos-productos/aloeCoco.png",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
       "nombre": "ALOE VERA KING ARANDONO AZUL 500ML",
       "foto": "assets/fotos-productos/aloeBlueberry.webp",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
       "nombre": "ALOE VERA KING ARANDONO ROJO 500ML",
       "foto": "assets/fotos-productos/aloeArandonorojo.png",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
 
     {
-      "nombre": "Aloe Vera King pineapple 500ML",
+      "nombre": "ALOE VERA KING PIÑA 500ML",
       "foto": "assets/fotos-productos/aloePina500mll.png",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "Aloe Vera King gold kiwi 500ML",
+      "nombre": "ALOE VERA KING GOLD KIWI 500ML",
       "foto": "assets/fotos-productos/aloeKiwi.png",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "ALOE VERA DRINK 2L",
-      "foto": "assets/fotos-productos/82511.png",
+      "nombre": "ALOE VERA KING DRINK 2L",
+      "foto": "assets/fotos-productos/aloe2lts.png",
       "precio":31000,
-      "caja":"6 u/caja"
+      "caja":"6 u/caja",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "ALOE VERA ORIG. KING SUGAR FREE 500ML",
-      "foto": "assets/fotos-productos/aloesugarfree.png",
+      "nombre": "ALOE VERA KING DRINK SUGAR FREE 500ML",
+      "foto": "assets/fotos-productos/aloeSugarfreeoriginal.png",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
       "nombre": "ALOE VERA KING SUGAR FREE FRUTILLA 500 ML",
-      "foto": "assets/fotos-productos/82511.png",
+      "foto": "assets/fotos-productos/1ALP4249 AVK ZERO SUGAR STRAWBERRY 500.png",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
       "nombre": "ALOE VERA KING SUGAR FREE PIÑA 500ML",
-      "foto": "assets/fotos-productos/82511.png",
+      "foto": "assets/fotos-productos/1ALP4246 AVK ZERO SUGAR PINEAPPLE 500.png",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "Aloe Vera King Pomegranate sugar free 500ML",
-      "foto": "assets/fotos-productos/82511.png",
+      "nombre": "ALOE VERA KING SUGAR FREE GRANADA 500ML",
+      "foto": "assets/fotos-productos/1ALP4248 AVK ZERO SUGAR POMEGRANATE 500.png",
       "precio":12500,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "PEACH DRINK 1,5ML",
-      "foto": "assets/fotos-productos/82511.png",
+      "nombre": "ALOE VERA KING PEACH 1,5ML",
+      "foto": "assets/fotos-productos/aloePeach1,5lts.png",
       "precio":26000,
-      "caja":"12 u/caja"
+      "caja":"12 u/caja",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "Aloe Vera King piña 1,5ML",
+      "nombre": "ALOE VERA KING PIÑA 1,5ML",
       "foto": "assets/fotos-productos/aloePina1.5ml.png",
       "precio":26000,
-      "caja":"12 u/caja"
+      "caja":"12 u/caja",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "Aloe Vera King granada 1,5ML",
+      "nombre": "ALOE VERA KING GRANADA 1,5ML",
       "foto": "assets/fotos-productos/aloeGranada1.5ml.jpg",
       "precio":26000,
-      "caja":"12 u/caja"
+      "caja":"12 u/caja",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "Aloe Vera King gold kiwi 1,5ML",
-      "foto": "assets/fotos-productos/82511.png",
+      "nombre": "ALOE VERA KING GOLD KIWI 1,5ML",
+      "foto": "assets/fotos-productos/aloeSugarfreeKiwi.png",
       "precio":26000,
-      "caja":"12 u/caja"
+      "caja":"12 u/caja",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "COCONUT DRINK NATURAL 1,5ML",
-      "foto": "assets/fotos-productos/82511.png",
+      "nombre": "COCONUT DRINK ORIGINAL 1,5ML",
+      "foto": "assets/fotos-productos/COCO 1500 - IMAGE.png",
       "precio":26000,
-      "caja":"12 u/caja"
+      "caja":"12 u/caja",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "STRAWBERRY DRINK 1,5ML",
-      "foto": "assets/fotos-productos/82511.png",
+      "nombre": "ALOE VERA KING FRUTILLA DRINK 1,5ML",
+      "foto": "assets/fotos-productos/aloeStraw1,5lts.png",
       "precio":26000,
-      "caja":"12 u/caja"
+      "caja":"12 u/caja",
+      "categoria": "Aloe Vera"
     },
     {
-      "nombre": "Aloe Vera King Sugar Free piña 1,5ML",
-      "foto": "assets/fotos-productos/82511.png",
+      "nombre": "ALOE VERA KING SUGAR FREE PIÑA 1,5ML",
+      "foto": "assets/fotos-productos/aloeSugarfreePina1,5lts.png",
       "precio":26000,
-      "caja":"12 u/caja"
+      "caja":"12 u/caja",
+      "categoria": "Aloe Vera"
     },
     {
       "nombre": "ALOE VERA KING SUGAR FREE 1,5ML",
-      "foto": "assets/fotos-productos/82511.png",
+      "foto": "assets/fotos-productos/aloeSugarfreeoriginal1.5ml.png",
       "precio":26000,
-      "caja":"12 u/caja"
+      "caja":"12 u/caja",
+      "categoria": "Aloe Vera"
     },
     {
       "nombre": "OKF SMOOTHIE GREEN 350ML",
       "foto": "assets/fotos-productos/smoothieeGreen.png",
       "precio":9000,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Smoothie"
     },
     {
       "nombre": "OKF SMOOTHIE ORANGE 350ML",
       "foto": "assets/fotos-productos/smoothieeOrange.webp",
       "precio": 9000,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Smoothie"
     },
     {
       "nombre": "OKF SMOOTHIE PURPLE 350ML",
       "foto": "assets/fotos-productos/smoothieepurple.webp",
       "precio": 9000,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Smoothie"
     },
     {
       "nombre": "OKF SMOOTHIE RED 350ML",
       "foto": "assets/fotos-productos/smoothieeRed.jpg",
       "precio": 9000,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Smoothie"
     },
     {
       "nombre": "ALOE VERA KING DRINK BOISSON 350ML LATA",
-      "foto": "assets/fotos-productos/aloeBoison.jpg",
+      "foto": "assets/fotos-productos/aloeBoison.png",
       "precio": 6000,
-      "caja":"20 u/caja."
+      "caja":"20 u/caja.",
+      "categoria": "Aloe Vera"
     },
     {
       "nombre": "CAFE MOCHA 240ML LATA",
       "foto": "assets/fotos-productos/cafeMocha.jpg",
       "precio": 7000,
-      "caja":"30 u/caja"
+      "caja":"30 u/caja",
+      "categoria": "Café"
     },
     {
       "nombre": "CAFE LATTE 240ML LATA",
       "foto": "assets/fotos-productos/cafeLatte.png",
       "precio": 7000,
-      "caja":"30 u/caja"
+      "caja":"30 u/caja",
+      "categoria": "Café"
     },
     {
       "nombre": "CAFE CAPPUCCINO 240ML LATA",
       "foto": "assets/fotos-productos/cafeCapuchino.webp",
       "precio": 7000,
-      "caja":"30 u/caja"
+      "caja":"30 u/caja",
+      "categoria": "Café"
     },
     {
       "nombre": "CARAMEL MACCHIATO 240ML LATA",
       "foto": "assets/fotos-productos/cafeMachiato.jpg",
       "precio": 7000,
-      "caja":"30 u/caja"
+      "caja":"30 u/caja",
+      "categoria": "Café"
     },
     {
       "nombre": "CERVEZA  EDELMEISTER LATA 500ML",
       "foto": "assets/fotos-productos/eldelmeisterClasico.png",
       "precio":6500,
-      "caja":"24 u/caja"
+      "caja":"24 u/caja",
+      "categoria": "Cerveza"
     },
     {
-      "nombre": "CERVEZA  EDELMEISTER SIN ALCOHOL LATA 500ML",
+      "nombre": "CERVEZA  EDELMEISTER SIN ALCOHOL 500ML",
       "foto": "assets/fotos-productos/cerbezaEldelmeistersin.png",
       "precio": 7200,
-      "caja":"24 u/caja"
+      "caja":"24 u/caja",
+      "categoria": "Cerveza"
     },{
-      "nombre": "Durazno San Sebastián 820gr",
-      "foto": "assets/fotos-productos/duraznoSansebastian.jpg",
+      "nombre": "DURAZNO SAN SEBASTIÁN 820gr",
+      "foto": "assets/fotos-productos/duraznoSansebastian.png",
       "precio":13000,
-      "caja":"12 u/caja"
+      "caja":"12 u/caja",
+      "categoria": "San Sebastián"
     },{
-      "nombre": "Choclo San Sebastian 300Gr",
-      "foto": "assets/fotos-productos/82511.png",
+      "nombre": "CHOCLO SAN SEBASTIÁN 300Gr",
+      "foto": "assets/fotos-productos/chocloSansebastianchico.png",
       "precio":4582,
-      "caja":"24 u/caja"
+      "caja":"24 u/caja",
+      "categoria": "San Sebastián"
     },{
-      "nombre": "Arveja San sebastian 300Gr",
-      "foto": "assets/fotos-productos/arvejasSansebastian.jpg",
+      "nombre": "ARVEJA SAN SEBASTIÁN 300Gr",
+      "foto": "assets/fotos-productos/arvejasSansebastian.png",
       "precio":3900,
-      "caja":"24 u/caja"
+      "caja":"24 u/caja",
+      "categoria": "San Sebastián"
     },{
-      "nombre": "Choclo San Sebastian 3000Gr",
+      "nombre": "CHOCLO SAN SEBASTIÁN 3KG",
       "foto": "assets/fotos-productos/chocloSansebastian.png",
       "precio":40600,
-      "caja":"6 u/caja"
+      "caja":"6 u/caja",
+      "categoria": "San Sebastián"
     },{
       "nombre": "CAFE BON AROMA CLASSIC 200GR",
       "foto": "assets/fotos-productos/cafeBonaromaClassic200gr.png",
-      "precio":35000
+      "precio":35000,
+      "caja":"12 u/caja",
+      "categoria": "Café"
+    },{
+      "nombre": "CAFE BON AROMA CLASSIC 100GR",
+      "foto": "assets/fotos-productos/cafeBonaromaClassic100gr.png",
+      "precio":21000,
+      "caja":"12 u/caja",
+      "categoria": "Café"
     },{
       "nombre": "CAFE BON AROMA CLASSIC 50GR",
       "foto": "assets/fotos-productos/cafeBonaromaClassic50gr.png",
-      "precio":13400
+      "precio":13400,
+      "caja":"12 u/caja",
+      "categoria": "Café"
     },{
-      "nombre": "CAFE BON AROMA CLASSIC 100GR",
-      "foto": "assets/fotos-productos/CAFEBONAROMAGOLD50GR.jpg",
-      "precio":21000
-    },{
-      "nombre": "CAFE BON AROMA DECAFEINATED CLASSIC 100GR",
+      "nombre": "CAFE BON AROMA DESCAFEINADO CLASSIC 100GR",
       "foto": "assets/fotos-productos/CAFEBONAROMADECAFEINATEDCLASSIC100GR.png",
-      "precio":24900
+      "precio":24900,
+      "caja":"12 u/caja",
+      "categoria": "Café"
     },{
       "nombre": "CAFE BON AROMA GOLD 100GR",
       "foto": "assets/fotos-productos/cafeBonaromaGold100gr.png",
-      "precio":26500
+      "precio":26500,
+      "caja":"12 u/caja",
+      "categoria": "Café"
     },{
       "nombre": "CAFE BON AROMA GOLD 50GR",
-      "foto": "assets/fotos-productos/",
-      "precio":14900
+      "foto": "assets/fotos-productos/CAFEBONAROMAGOLD50GR.jpg",
+      "precio":14900,
+      "caja":"12 u/caja",
+      "categoria": "Café"
     },{
-      "nombre": "CAFE BON AROMA DECAFEINATED GOLD 100GR",
-      "foto": "assets/fotos-productos/",
-      "precio":29900
+      "nombre": "CAFE BON AROMA DESCAFEINADO GOLD 100GR",
+      "foto": "assets/fotos-productos/cafeBonaromaDECAFEINATEDGOLD100GR.png",
+      "precio":29900,
+      "caja":"12 u/caja",
+      "categoria": "Café"
     },{
       "nombre": "CAFE NOBLE ESSENCE BRAZIL 100GR",
-      "foto": "assets/fotos-productos/82511.png",
-      "precio":25900
+      "foto": "assets/fotos-productos/NobleessenceBrazil.png",
+      "precio":25900,
+      "caja":"12 u/caja",
+      "categoria": "Café"
     }, {
       "nombre": "CAFE NOBLE ESSENCE EXCLUSIVE 100GR",
-      "foto": "assets/fotos-productos/82511.png",
-      "precio":25900
+      "foto": "assets/fotos-productos/NobleessenceExclusive.png",
+      "precio":25900,
+      "caja":"12 u/caja",
+      "categoria": "Café"
     },
     {
       "nombre": "CAFE NOBLE ESSENCE GOLD 100GR",
-      "foto": "assets/fotos-productos/82511.png",
-      "precio":25900
+      "foto": "assets/fotos-productos/NobleessenceGold.png",
+      "precio":25900,
+      "caja":"12 u/caja",
+      "categoria": "Café"
     },
     {
       "nombre": "CAFE NOBLE BON AROMA GOLD 75 G SACHET",
-      "foto": "assets/fotos-productos/82511.png",
-      "precio":15000
+      "foto": "assets/fotos-productos/cafeBonaromaSachet.png",
+      "precio":15000,
+      "caja":"12 u/caja",
+      "categoria": "Café"
     }
   ]
   
