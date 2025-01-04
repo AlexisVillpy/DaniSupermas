@@ -329,6 +329,83 @@
       "precio":15000,
       "caja":"12 u/caja",
       "categoria": "Café"
+    },
+    {
+      "nombre": "CAFE NOBLE ESSENCE GOLD 100GR",
+      "foto": "assets/fotos-productos/NobleessenceGold.png",
+      "precio":25900,
+      "caja":"12 u/caja",
+      "categoria": "Café"
+    },
+    {
+      "nombre": "ACEITE DE OLIVA EXTRA VIRGEN 5L LATA",
+      "foto": "assets/fotos-productos/Aceitevirgen5lPietro.png",
+      "precio":648207,
+      "caja":"12 u/caja",
+      "categoria": "Pietro Coricelli"
+    },
+    {
+      "nombre": "ACEITE DE OLIVA POMACE PIETRO 5L",
+      "foto": "assets/fotos-productos/Aceitepomace5lPietro.png",
+      "precio":360115,
+      "caja":"12 u/caja",
+      "categoria": "Pietro Coricelli"
+    },
+    {
+      "nombre": "ACEITE DE OLIVA EXTRA VIRGEN PIETRO 1L",
+      "foto": "assets/fotos-productos/Aceitevirgen1lPietro.png",
+      "precio":152641,
+      "caja":"12 u/caja",
+      "categoria": "Pietro Coricelli"
+    },
+    {
+      "nombre": "SALSA DE TOMATE ARRABBIATA 350GR",
+      "foto": "assets/fotos-productos/SalsaArrabbiata.png",
+      "precio":20743,
+      "caja":"12 u/caja",
+      "categoria": "Pietro Coricelli"
+    },
+    {
+      "nombre": "SALSA DE TOMATE NAPOLITANA 350GR",
+      "foto": "assets/fotos-productos/SalsaNapolitana.png",
+      "precio":20743,
+      "caja":"12 u/caja",
+      "categoria": "Pietro Coricelli"
+    },
+    {
+      "nombre": "SALSA DE TOMATE BOLOGNESA 350GR",
+      "foto": "assets/fotos-productos/SalsaBolognese.png",
+      "precio":25064,
+      "caja":"12 u/caja",
+      "categoria": "Pietro Coricelli"
+    },
+    {
+      "nombre": "SALSA DE TOMATE BASILICO 350GR",
+      "foto": "assets/fotos-productos/SalsaBasilico.png",
+      "precio":20743,
+      "caja":"12 u/caja",
+      "categoria": "Pietro Coricelli"
+    },
+    {
+      "nombre": "SALSA PESTO GENOVESE 190GR",
+      "foto": "assets/fotos-productos/SalsaPesto.png",
+      "precio":29380,
+      "caja":"12 u/caja",
+      "categoria": "Pietro Coricelli"
+    },
+    {
+      "nombre": "ACETO BALSAMICO DI MODENA 500ML",
+      "foto": "assets/fotos-productos/Aceto500ml.png",
+      "precio":27009,
+      "caja":"12 u/caja",
+      "categoria": "Pietro Coricelli"
+    },
+    {
+      "nombre": "ACETO BALSAMICO DI MODENA 250ML",
+      "foto": "assets/fotos-productos/Aceto250ml.png",
+      "precio":17424,
+      "caja":"12 u/caja",
+      "categoria": "Pietro Coricelli"
     }
   ]
   

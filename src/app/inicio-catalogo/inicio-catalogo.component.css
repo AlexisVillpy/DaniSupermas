@@ -118,11 +118,12 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  overflow-x: hidden;
+  overflow: hidden;
   margin-right: 20px;
   padding: 0 10px;
   box-sizing: border-box;
   max-width: 100%;
+  position: relative;
 }
 
 .brand-logo {

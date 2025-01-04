@@ -17,7 +17,7 @@ export class InicioCatalogoComponent implements OnInit {
   searchTerm: string = ''; // Término de búsqueda
   selectedCategory: string = ''; // Categoría seleccionada
 
-  categorias: string[] = ['Cerveza', 'Aloe Vera', 'Café', 'San Sebastián', 'Smoothie']; // Categorías disponibles
+  categorias: string[] = ['Cerveza', 'Aloe Vera', 'Café', 'San Sebastián', 'Smoothie','Pietro Coricelli']; // Categorías disponibles
 
   constructor(private http: HttpClient) {}
 
