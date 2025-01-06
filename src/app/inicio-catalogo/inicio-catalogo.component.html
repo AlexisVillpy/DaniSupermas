@@ -15,16 +15,16 @@
   <div class="banner">
     <!-- Contenedor del logo principal -->
     <div class="logo-container">
-      <img src="assets/iconos%20y%20logos/logoilmondo.png" alt="Logo Ilmondo">
+      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/logoilmondo.png" alt="Logo Ilmondo">
     </div>
 
     <!-- Contenedor de los logos de marcas -->
     <div class="brands-container">
-      <img src="assets/iconos%20y%20logos/coricelli_logo.png" alt="Marca 1" class="brand-logo">
-      <img src="assets/iconos%20y%20logos/logoBonaroma.png" alt="Marca 2" class="brand-logo">
-      <img src="assets/iconos%20y%20logos/logoSansebastian.png" alt="Marca 4" class="brand-logo">
-      <img src="assets/iconos%20y%20logos/okfLogo.png" alt="Marca 5" class="brand-logo">
-      <img src="assets/iconos%20y%20logos/edelmeister_logo.png" alt="Marca 3" class="brand-logo">
+      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/coricelli_logo.png" alt="Marca 1" class="brand-logo">
+      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/logoBonaroma.png" alt="Marca 2" class="brand-logo">
+      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/logoSansebastian.png" alt="Marca 4" class="brand-logo">
+      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/okfLogo.png" alt="Marca 5" class="brand-logo">
+      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/edelmeister_logo.png" alt="Marca 3" class="brand-logo">
     </div>
   </div>
 
@@ -69,7 +69,7 @@
       <div *ngFor="let producto of productosFiltrados" class="card">
         <div class="image-container">
           <!-- Imagen de producto -->
-          <img [src]="'assets/' + producto.foto" alt="{{ producto.nombre }}" />
+          <img [src]="'/Catalogo-ilmondo/assets/' + producto.foto" alt="{{ producto.nombre }}" />
         </div>
         <div class="card-body">
           <h3 class="card-title">{{ producto.nombre }}</h3>
