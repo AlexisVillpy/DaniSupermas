@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Catalogoilmondo</title>
-  <base href="/Catalogo-ilmondo/">
+  <base href="/Catalogo-ilmondo/assets/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -69,7 +69,7 @@
       <div *ngFor="let producto of productosFiltrados" class="card">
         <div class="image-container">
           <!-- Imagen de producto -->
-          <img [src]="'/Catalogo-ilmondo/assets/' + producto.foto" alt="{{ producto.nombre }}" />
+          <img [src]="producto.foto" alt="{{ producto.nombre }}" />
         </div>
         <div class="card-body">
           <h3 class="card-title">{{ producto.nombre }}</h3>
