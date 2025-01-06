@@ -60,7 +60,15 @@
     margin-bottom: 20px;
   }
   
-  
+  /* Forzar el modo claro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #ffffff; /* o cualquier color de fondo claro que prefieras */
+    color: #000000; /* o cualquier color de texto oscuro que prefieras */
+  }
+}
+
+
   /* Estilo para el botón de comprar */
   button {
     background-color: #2A4D77;  /* Azul oscuro para el botón */

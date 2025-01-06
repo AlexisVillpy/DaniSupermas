@@ -27,7 +27,13 @@ export class InicioCatalogoComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
+    // Forzar el modo claro
+    this.setLightMode();
     this.cargarProductos();
+  }
+
+  setLightMode(): void {
+    document.documentElement.style.setProperty('color-scheme', 'light');
   }
 
   cargarProductos(): void {
