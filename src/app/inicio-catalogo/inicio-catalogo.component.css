@@ -265,3 +265,12 @@
 .dropdown-container option {
   padding: 8px;
 }
+
+/* Forzar el modo claro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #ffffff; /* o cualquier color de fondo claro que prefieras */
+    color: #000000; /* o cualquier color de texto oscuro que prefieras */
+  }
+}
+
