@@ -31,7 +31,7 @@ export class InicioCatalogoComponent implements OnInit {
   }
 
   cargarProductos(): void {
-    this.http.get<any[]>('/assets/productos.json').subscribe({
+    this.http.get<any[]>('assets/productos.json').subscribe({
       next: (response) => {
         if (response && response.length > 0) {
           this.productos = response;
