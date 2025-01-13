@@ -1,30 +1,28 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Catalogoilmondo</title>
-  <base href="/Catalogo-ilmondo/assets/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body class="mat-typography">
+<base href="/Catalogo-ilmondo/assets/" />
 
+<!-- Preloader -->
+<div *ngIf="isLoading" id="preloader">
+  <div class="spinner"></div>
+</div>
+
+<div *ngIf="!isLoading">
   <!-- Banner -->
   <div class="banner">
     <!-- Contenedor del logo principal -->
     <div class="logo-container">
-      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/logoilmondo.png" alt="Logo Ilmondo">
+      <img src="assets/iconosylogos/logoilmondo.png" alt="Logo Ilmondo" />
     </div>
 
-    <!-- Contenedor de los logos de marcas -->
-    <div class="brands-container">
-      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/coricelli_logo.png" alt="Marca 1" class="brand-logo">
-      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/logoBonaroma.png" alt="Marca 2" class="brand-logo">
-      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/logoSansebastian.png" alt="Marca 4" class="brand-logo">
-      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/okfLogo.png" alt="Marca 5" class="brand-logo">
-      <img src="/Catalogo-ilmondo/assets/iconos%20y%20logos/edelmeister_logo.png" alt="Marca 3" class="brand-logo">
+    <!-- Botón de contacto -->
+    <div class="phone-button-container">
+      <button
+        mat-raised-button
+        color="primary"
+        class="phone-button"
+        [routerLink]="'/contacto'"
+      >
+        <mat-icon>phone</mat-icon>
+      </button>
     </div>
   </div>
 
@@ -54,7 +52,9 @@
       <div class="dropdown-container">
         <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
           <option value="">Todas las categorías</option>
-          <option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria }}</option>
+          <option *ngFor="let categoria of categorias" [value]="categoria">
+            {{ categoria }}
+          </option>
         </select>
       </div>
     </div>
@@ -73,13 +73,15 @@
         </div>
         <div class="card-body">
           <h3 class="card-title">{{ producto.nombre }}</h3>
-          <p class="card-price">Precio c/u: <span class="price-number">{{ producto.precio | number }}</span> <span class="price-currency">gs</span></p>
+          <p class="card-price">
+            Precio c/u:
+            <span class="price-number">{{ producto.precio | number }}</span>
+            <span class="price-currency">gs</span>
+          </p>
           <p class="card-box">Unidades: {{ producto.caja }}</p>
           <button>Detalle</button>
         </div>
       </div>
     </div>
   </div>
-
-</body>
-</html>
+</div>

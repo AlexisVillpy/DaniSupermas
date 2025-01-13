@@ -7,71 +7,128 @@
   height: 75px;
   background-color: #1d3557;
   display: flex;
-  justify-content: space-between; /* Separa los elementos del logo principal y las marcas */
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   min-width: 110px;
 }
-/* Contenedor del logo con fondo blanco y bordes redondeados */
 
 /* Estilo del logo */
 .logo-container img {
-  max-height: 70px;  /* Ajusta el tamaño del logo */
+  max-height: 70px; /* Ajusta el tamaño del logo */
   object-fit: contain;
   margin-top: 15px;
 }
 
 /* Evita que el contenido se superponga al banner */
 .catalogo-container {
-  margin-top: 70px; 
+  margin-top: 70px;
+}
+.card:hover {
+  transform: scale(0.98);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para la descripción y el precio */
+.card-body {
+  padding: 10px;
+}
 
-  /* Estilos generales */
-  body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #ffffff;  /* Fondo blanco */
-    color: #333;  /* Gris oscuro para textos */
-    padding: 20px;
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2a4d77;
+  margin-bottom: 5px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el botón de comprar */
+button {
+  background-color: #2a4d77;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #1a3c5d;
+}
+
+/* Mensaje de carga */
+.loading-text {
+  text-align: center;
+  color: #b0b0b0;
+  font-size: 1.2rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+
+  /* Estilo del logo */
+  .logo-container img {
+    max-height: 70px;
+    object-fit: contain;
+    margin-top: 15px;
   }
-  
+
+  /* Evita que el contenido se superponga al banner */
+  .catalogo-container {
+    margin-top: 70px;
+  }
   .card:hover {
-    transform: scale(0.98);  /* Producto se achica cuando el ratón está encima */
+    transform: scale(0.98);
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
   }
-  
+
   /* Estilos para la descripción y el precio */
   .card-body {
     padding: 10px;
   }
-  
+
   .card-title {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #2A4D77;  /* Azul oscuro para el título del producto */
+    color: #2a4d77;
     margin-bottom: 5px;
   }
-  
+
   .card-description {
     font-size: 1rem;
-    color: #B0B0B0;  /* Gris claro para las descripciones */
+    color: #b0b0b0;
     margin-bottom: 20px;
   }
-  
-  /* Forzar el modo claro */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #ffffff; /* o cualquier color de fondo claro que prefieras */
-    color: #000000; /* o cualquier color de texto oscuro que prefieras */
-  }
-}
 
+  /* Forzar el modo claro */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  }
 
   /* Estilo para el botón de comprar */
   button {
-    background-color: #2A4D77;  /* Azul oscuro para el botón */
+    background-color: #2a4d77;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -81,17 +138,90 @@
     transition: background-color 0.3s ease;
     width: 100%;
   }
-  
+
   button:hover {
-    background-color: #1A3C5D;  /* Azul más oscuro al hacer hover */
+    background-color: #1a3c5d;
   }
-  
+
   /* Mensaje de carga */
   .loading-text {
     text-align: center;
-    color: #B0B0B0;  /* Gris claro para el texto de "cargando" */
+    color: #b0b0b0;
     font-size: 1.2rem;
   }
-  
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  app-root {
+    flex: 1;
+  }
+  footer {
+    background-color: #1d3557;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .footer-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer-content p {
+    margin: 5px 0;
+  }
+  .brands-container,
+  .brands-second-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  .brands-second-row {
+    margin-top: -20px;
+  }
+  .brand-logo {
+    max-height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  .brand-logo:hover {
+    transform: scale(1.1);
+  }
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .brands-container,
+    .brands-second-row {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .brands-second-row {
+      margin-top: 10px;
+    }
+    .brand-logo {
+      max-height: 60px;
+    }
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garantiza que el padding y borde no afecten el tamaño */
+}

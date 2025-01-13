@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { CommonModule } from '@angular/common';  // Importa CommonModule
-import { FormsModule } from '@angular/forms';  // Importa FormsModule
-import { MatIconModule } from '@angular/material/icon';  // Importa MatIconModule
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-inicio-catalogo',
@@ -11,32 +12,43 @@ import { MatIconModule } from '@angular/material/icon';  // Importa MatIconModul
   templateUrl: './inicio-catalogo.component.html',
   styleUrls: ['./inicio-catalogo.component.css'],
   imports: [
-    HttpClientModule,  // Ya está importado
-    CommonModule,      // Asegúrate de incluir CommonModule
-    FormsModule,       // Incluye FormsModule para ngModel
-    MatIconModule      // Incluye MatIconModule para mat-icon
-  ]
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+    MatIconModule,
+    RouterModule,
+  ],
 })
-export class InicioCatalogoComponent implements OnInit {
+export class InicioCatalogoComponent implements OnInit, AfterViewInit {
   productos: any[] = [];
   productosFiltrados: any[] = [];
   searchTerm: string = '';
   selectedCategory: string = '';
-  categorias: string[] = ['Cerveza', 'Aloe Vera', 'Café', 'San Sebastián', 'Smoothie', 'Pietro Coricelli'];
+  categorias: string[] = [
+    'Cerveza',
+    'Aloe Vera',
+    'Café',
+    'San Sebastián',
+    'Smoothie',
+    'Pietro Coricelli',
+  ];
+
+  isLoading: boolean = true; // Controla la visibilidad del preloader
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    // Forzar el modo claro
-    this.setLightMode();
     this.cargarProductos();
   }
 
-  setLightMode(): void {
-    document.documentElement.style.setProperty('color-scheme', 'light');
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.isLoading = false; // Oculta el preloader después de que Angular haya cargado la vista
+    }, 500); // Ajusta este tiempo si es necesario
   }
 
   cargarProductos(): void {
+    this.isLoading = true; 
     this.http.get<any[]>('assets/productos.json').subscribe({
       next: (response) => {
         if (response && response.length > 0) {
@@ -48,18 +60,24 @@ export class InicioCatalogoComponent implements OnInit {
       },
       error: (error) => {
         console.error('Error al cargar productos:', error);
-      }
+      },
+      complete: () => {
+        this.isLoading = false; 
+      },
     });
   }
 
   filtrarProductos(): void {
     const termino = this.searchTerm.toLowerCase();
-    this.productosFiltrados = this.productos.filter(producto => {
-      const coincideBusqueda = producto.nombre.toLowerCase().includes(termino) ||
+    this.productosFiltrados = this.productos.filter((producto) => {
+      const coincideBusqueda =
+        producto.nombre.toLowerCase().includes(termino) ||
         producto.precio.toString().includes(termino) ||
         producto.caja.toString().includes(termino);
 
-      const coincideCategoria = this.selectedCategory ? producto.categoria === this.selectedCategory : true;
+      const coincideCategoria = this.selectedCategory
+        ? producto.categoria === this.selectedCategory
+        : true;
 
       return coincideBusqueda && coincideCategoria;
     });

@@ -1,0 +1,59 @@
+<base href="/Catalogo-ilmondo/assets/" />
+
+<!-- Preloader -->
+<div *ngIf="isLoading" id="preloader">
+  <div class="spinner"></div>
+</div>
+
+<!-- El contenido real de la página -->
+<div *ngIf="!isLoading">
+  <!-- Banner con logo como botón de redirección (solo en la página de contacto) -->
+  <div *ngIf="isContactPage" class="banner">
+    <a href="/Catalogo-ilmondo/inicio" class="logo-container">
+      <img src="assets/iconosylogos/logoilmondo.png" alt="Logo Ilmondo" />
+    </a>
+  </div>
+
+  <!-- Catálogo -->
+  <div class="catalogo-container">
+    <h2 class="title">
+      <mat-icon>phone</mat-icon>
+      Conctatos
+    </h2>
+  </div>
+
+  <!-- Desplegable Categorías -->
+  <div class="dropdown-container">
+    <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
+      <option value="">Seleccione sede...</option>
+      <option *ngFor="let categoria of categorias" [value]="categoria">
+        {{ categoria }}
+      </option>
+    </select>
+  </div>
+
+  <!-- Mensajes y botón de WhatsApp -->
+  <div class="whatsapp-container">
+    <p *ngIf="!selectedCategory">
+      Seleccione una sede para obtener el contacto de WhatsApp...
+    </p>
+    <div *ngIf="selectedCategory">
+      <p *ngIf="getWhatsAppLink()">
+        Contacto de WhatsApp para {{ selectedCategory }}:
+      </p>
+      <a
+        *ngIf="getWhatsAppLink()"
+        [href]="getWhatsAppLink()"
+        target="_blank"
+        class="btn-whatsapp"
+      >
+        <img
+          src="assets/iconosylogos/WhatsApp.png"
+          alt="WhatsApp"
+          class="whatsapp-icon"
+        />
+        Ir al chat de WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
