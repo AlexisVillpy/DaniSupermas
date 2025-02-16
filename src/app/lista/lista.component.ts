@@ -6,7 +6,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import axios from 'axios'; // Importar axios
 import { PdfMonkeyService } from '../pdf-monkey.service'; // Importar el servicio
-import { SlackService } from '../slack.service'; // Importar el servicio de Slack
 
 @Component({
   selector: 'app-lista',
@@ -21,7 +20,7 @@ export class ListaComponent {
   showClientForm: boolean = false;
   clientData = { firstName: '', lastName: '', email: '', sucursal: '' }; // Datos del cliente
 
-  constructor(private listaService: ListaService, private slackService: SlackService) {} // Inyectar el servicio de Slack
+  constructor(private listaService: ListaService) {}
 
   ngOnInit() {
     this.productosEnLista = this.listaService.obtenerLista();
@@ -160,15 +159,9 @@ Fecha: ${invoiceData.orderDate}
 Total sin IVA: ${invoiceData.total_without_vat}
 Ver factura: ${pdfUrl}`;
 
-              // Enviar notificación a Slack usando el servicio
-              this.slackService.sendMessage(slackMessage).subscribe(
-                response => {
-                  console.log('Notificación enviada a Slack:', response);
-                },
-                error => {
-                  console.error('Error al enviar la notificación a Slack:', error);
-                }
-              );
+              // Enviar notificación a Slack a través de tu backend para evitar CORS
+              await axios.post('http://localhost:3000/api/slack-notify', { message: slackMessage });
+              console.log('Notificación enviada a Slack a través del backend');
             } else {
               console.error('No se encontró la URL de descarga del PDF.');
             }
