@@ -79,9 +79,21 @@
             <span class="price-currency">gs</span>
           </p>
           <p class="card-box">Unidades: {{ producto.caja }}</p>
-          <button>Detalle</button>
+          <button
+            (click)="agregarALista(producto)"
+            [class.selected]="productoSeleccionado(producto)"
+          >
+            {{
+              productoSeleccionado(producto)
+                ? "Ya en la lista"
+                : "Agregar a mi lista"
+            }}
+          </button>
         </div>
       </div>
+      <a mat-fab class="floating-button" [routerLink]="'/lista'">
+        <mat-icon>shopping_cart</mat-icon>
+      </a>
     </div>
   </div>
 </div>

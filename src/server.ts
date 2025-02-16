@@ -7,6 +7,7 @@ import {
 import express from 'express';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import axios from 'axios'; // Necesitarás instalar axios
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
@@ -14,17 +15,21 @@ const browserDistFolder = resolve(serverDistFolder, '../browser');
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
-/**
- * Example Express Rest API endpoints can be defined here.
- * Uncomment and define endpoints as necessary.
- *
- * Example:
- * ```ts
- * app.get('/api/**', (req, res) => {
- *   // Handle API request
- * });
- * ```
- */
+// Configuración para enviar mensajes a Slack
+const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK';
+
+// Endpoint para enviar mensaje a Slack
+app.post('/sendSlackMessage', async (req, res) => {
+  try {
+    const { message } = req.body;
+    // Usar axios para enviar el mensaje a Slack
+    await axios.post(SLACK_WEBHOOK_URL, { text: message });
+    res.status(200).json({ status: 'Message sent to Slack' });
+  } catch (error) {
+    console.error('Error sending message to Slack:', error);
+    res.status(500).json({ status: 'Error sending message to Slack' });
+  }
+});
 
 /**
  * Serve static files from /browser

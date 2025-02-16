@@ -325,3 +325,27 @@
     }
   }
 }
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff4081 !important;
+  color: white !important;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.floating-button:hover {
+  background-color: #e0005a !important;
+}
+
+.selected {
+  background-color: #4caf50 !important;
+}

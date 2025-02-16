@@ -19,6 +19,42 @@
   vertical-align: middle;
   color: white;
 }
+/* Estilo del ícono y texto */
+.back-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px; /* Tamaño del texto */
+  text-decoration: none;
+  margin-right: 30px;
+  padding: 10px;
+  font-weight: bold; 
+}
+
+/* Estilo del ícono dentro del enlace */
+.back-icon mat-icon {
+  font-size: 24px; /* Tamaño del ícono */
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+  font-weight: bold; 
+}
+
+/* Efecto de hover sobre todo el enlace */
+.back-icon:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de todo el conjunto */
+}
+
+/* Efecto de hover sobre el ícono */
+.back-icon mat-icon:hover {
+  transform: scale(1.2); /* Efecto de zoom solo para el ícono */
+}
+
+/* Efecto de hover sobre el texto */
+.back-icon:hover span {
+  font-weight: bold; /* Hace que el texto se ponga en negrita al pasar el ratón */
+}
+
 
 .catalogo-container {
   margin-top: 75px;
@@ -79,37 +115,6 @@
   width: 25px;
   height: 25px;
   object-fit: contain;
-}
-/* Preloader (spinner) */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.spinner {
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top: 4px solid #000;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 .logo-container {
