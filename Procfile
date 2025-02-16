@@ -17,7 +17,9 @@ El error que estás viendo indica que Heroku no puede encontrar el módulo `main
 
 1. **Verifica la estructura de tu proyecto**: Asegúrate de que el archivo `main.server.js` exista en la ruta `dist/catalogoilmondo/server/`.
 
-2. **Actualiza el `Procfile`**: Asegúrate de que el `Procfile` esté correctamente configurado para iniciar tu aplicación. Aquí hay un ejemplo de cómo debería verse:
+2. **Verificar la estructura del proyecto**: Asegúrate de que el archivo `main.server.js` exista en la ruta `dist/catalogoilmondo/server/`.
+
+3. **Actualizar el `Procfile`**: Asegúrate de que el `Procfile` esté correctamente configurado para iniciar tu aplicación. Aquí hay un ejemplo de cómo debería verse:
 
 ```markdown
 web: node dist/catalogoilmondo/server/main.server.js

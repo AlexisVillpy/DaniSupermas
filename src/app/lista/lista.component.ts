@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import axios from 'axios'; // Importar axios
 import { PdfMonkeyService } from '../pdf-monkey.service'; // Importar el servicio
+import { SlackService } from '../slack.service'; // Importar el servicio de Slack
 
 @Component({
   selector: 'app-lista',
@@ -20,7 +21,7 @@ export class ListaComponent {
   showClientForm: boolean = false;
   clientData = { firstName: '', lastName: '', email: '', sucursal: '' }; // Datos del cliente
 
-  constructor(private listaService: ListaService) {}
+  constructor(private listaService: ListaService, private slackService: SlackService) {} // Inyectar el servicio de Slack
 
   ngOnInit() {
     this.productosEnLista = this.listaService.obtenerLista();
@@ -65,9 +66,12 @@ export class ListaComponent {
       };
 
       // Obtener el número incremental (si no existe, inicializarlo en 1)
-      let invoiceNumber = parseInt(localStorage.getItem('invoiceNumber') || '0', 10);
-      invoiceNumber += 1; // Incrementar el número
-      localStorage.setItem('invoiceNumber', invoiceNumber.toString()); // Guardar el número actualizado
+      let invoiceNumber = 0;
+      if (typeof localStorage !== 'undefined') {
+        invoiceNumber = parseInt(localStorage.getItem('invoiceNumber') || '0', 10);
+        invoiceNumber += 1; // Incrementar el número
+        localStorage.setItem('invoiceNumber', invoiceNumber.toString()); // Guardar el número actualizado
+      }
 
       // Calcular el total global
       const totalGlobal = Math.round(
