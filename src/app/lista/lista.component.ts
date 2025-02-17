@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import axios from 'axios'; // Importar axios
 import { PdfMonkeyService } from '../pdf-monkey.service'; // Importar el servicio
+import { HttpClient } from '@angular/common/http'; // Importar HttpClient
+import { SlackService } from '../slack.service'; // Importar el servicio de Slack
 
 @Component({
   selector: 'app-lista',
@@ -20,7 +22,7 @@ export class ListaComponent {
   showClientForm: boolean = false;
   clientData = { firstName: '', lastName: '', email: '', sucursal: '' }; // Datos del cliente
 
-  constructor(private listaService: ListaService) {}
+  constructor(private listaService: ListaService, private http: HttpClient, private slackService: SlackService) {} // Inyectar SlackService
 
   ngOnInit() {
     this.productosEnLista = this.listaService.obtenerLista();
@@ -153,15 +155,17 @@ export class ListaComponent {
               const slackMessage = `Nuevo pedido recibido:
 Cliente: ${invoiceData.clientName}
 Factura N.º: ${invoiceData.invoiceNumber}
-Email: ${invoiceData.clientEmail}
 Sucursal: ${invoiceData.clientSucursal}
 Fecha: ${invoiceData.orderDate}
-Total sin IVA: ${invoiceData.total_without_vat}
 Ver factura: ${pdfUrl}`;
 
-              // Enviar notificación a Slack a través de tu backend para evitar CORS
-              await axios.post('http://localhost:3000/api/slack-notify', { message: slackMessage });
-              console.log('Notificación enviada a Slack a través del backend');
+              // Enviar notificación a Slack a través del servicio de Slack
+              try {
+                const response = await this.slackService.notify(slackMessage).toPromise();
+                console.log('Notificación enviada a Slack:', response);
+              } catch (error) {
+                console.error('Error al enviar notificación a Slack:', error);
+              }
             } else {
               console.error('No se encontró la URL de descarga del PDF.');
             }
