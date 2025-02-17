@@ -1,130 +1,122 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 600px;
-  }
-  
-  .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  .image-container img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    border-radius: 8px;
-    margin-right: 10px;
-  }
-  
-  .card-body {
-    flex: 1;
-  }
-  
-  .card-title {
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0;
-    color: #333;
-  }
-  
-  .card-category {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #000000;
-    opacity: 50%;
-    margin-top: 7px;
-  }
-  
-  .card-price {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #3181d2;
-  }
-  
-  /* Contenedor principal de acciones */
-  .actions {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Contenedor de control de cantidad y botón eliminar, en columna */
-  .quantity-control {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  /* Fila de botones y display de cantidad */
-  .quantity-row {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  
-  /* Texto de la cantidad, más visible */
-  .quantity-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #000;
-    padding-inline: 5px;
-  }
-  .comet-v2-input-number {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 120px;
-    overflow: hidden;
-  }
-  
-  .comet-v2-input-number-btn {
-    background: #ffffff;
-    color: #8f8f8f;
-    border: none;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .comet-v2-input-number-input {
-    width: 40px;
-    text-align: center;
-    border: none;
-    font-size: 1rem;
-    padding: 5px;
-    font-weight: bold;
-    overflow: hidden; /* Evita barras de desplazamiento */
-    resize: none;
-  }
-  
-  .comet-v2-input-number-input:focus {
-    outline: none;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+}
 
-  /* Para Chrome, Safari, Edge y otros navegadores basados en WebKit */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.image-container img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.card-body {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.card-category {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #000000;
+  opacity: 50%;
+  margin-top: 7px;
+}
+
+.card-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3181d2;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  padding-inline: 5px;
+}
+
+.comet-v2-input-number {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 120px;
+}
+
+.comet-v2-input-number-btn {
+  background: #ffffff;
+  color: #8f8f8f;
+  border: none;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.comet-v2-input-number-input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.comet-v2-input-number-input:focus {
+  outline: none;
+}
+
 .comet-v2-input-number-input::-webkit-outer-spin-button,
 .comet-v2-input-number-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .lista-container {
@@ -134,7 +126,7 @@
 .title {
   color: white;
   text-align: center;
-  padding: 12px; /* Aumenta el padding horizontal para mantener el texto centrado */
+  padding: 12px;
   background: linear-gradient(45deg, #2d6cb9, #1d3557);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -144,8 +136,7 @@
   gap: 8px;
   margin-top: 100px;
   margin-inline: 30px;
- }
-
+}
 
 .title mat-icon {
   vertical-align: middle;
@@ -153,53 +144,51 @@
 }
 
 .iva-text {
-  font-size: 0.85rem; /* Tamaño ligeramente más pequeño */
-  font-style: italic; /* Estilo cursivo para hacerlo más elegante */
-  color: #757575; /* Color gris tenue */
-  margin-top: 4px; /* Espacio con respecto a la categoría */
-}
-/* Estilos para el contenedor de los botones */
-.action-container {
-  display: flex;
-  align-items: center; /* Alinea verticalmente los elementos */
-  gap: 10px; /* Espacio entre los elementos */
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #757575;
+  margin-top: 4px;
 }
 
-/* Estilos para el enlace eliminar */
+.action-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .delete-link {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  color: rgba(225, 18, 18, 0.8); /* Rojo medio */
+  color: rgba(225, 18, 18, 0.8);
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
-  position: relative; /* Posiciona el enlace en relación a su posición original */
-  top: 15px; /* Desplaza solo el enlace hacia abajo */
+  position: relative;
+  top: 15px;
   right: 5px;
 }
 
 .delete-link .delete-icon {
   font-size: 1.2rem;
-  color: rgba(225, 18, 18, 0.8); /* Ícono con el mismo color */
+  color: rgba(225, 18, 18, 0.8);
 }
 
 .delete-link:hover {
-  color: rgba(193, 15, 15, 0.9); /* Un rojo más oscuro al pasar el mouse */
+  color: rgba(193, 15, 15, 0.9);
 }
 
 .delete-link:active {
-  color: rgba(193, 15, 15, 0.7); /* Un rojo más claro al hacer clic */
+  color: rgba(193, 15, 15, 0.7);
 }
 
-/* Estilo del enlace Volver al catálogo */
 .back-link {
   display: inline-flex;
   align-items: center;
   gap: 3px;
-  color: rgb(255, 255, 255); /* Negro opaco */
+  color: rgb(255, 255, 255);
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
@@ -208,141 +197,130 @@
   margin-left: -10px;
 }
 
-/* Estilo del ícono en el enlace Volver al catálogo */
 .back-link .icon {
   font-size: 1.2rem;
-  color: rgb(255, 255, 255); /* Ícono con color blanco */
+  color: rgb(255, 255, 255);
   margin-top: 3px;
   transition: color 0.2s ease;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
-/* Contenedor de los botones */
 .action-buttons {
   display: flex;
-  justify-content: space-between; /* Coloca los botones a los extremos */
-  align-items: center; /* Centra los botones verticalmente */
+  justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
   background: #234676;
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 10px 50px; /* Espaciado interno (padding) */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 10px;
+  padding: 10px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   gap: 250px;
   font-size: 1rem;
 }
 
-/* Estilos para el enlace "Enviar Pedido" (con forma de botón) */
 .send-link {
   display: inline-flex;
   align-items: center;
-  gap: 4px; /* Espacio entre el ícono y el texto */
+  gap: 4px;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 5px; /* Bordes redondeados */
-  white-space: nowrap; /* Evita que el texto y el ícono se dividan en dos líneas */
-  color: rgb(254, 254, 254); /* Blanco para el texto */
+  border-radius: 5px;
+  white-space: nowrap;
+  color: rgb(254, 254, 254);
   transition: color 0.2s ease;
 }
 
-/* Estilo del ícono en el enlace Enviar Pedido */
 .send-link .icon {
   font-size: 1.2rem;
-  color: #ffffff; /* Color blanco para el ícono */
+  color: #ffffff;
   margin-top: 5px;
   transition: color 0.2s ease;
-  
 }
 
-/* Efecto hover en los enlaces y sus íconos */
-.back-link:hover, .send-link:hover {
-  color: #ffffffcf; /* Color suave y claro al pasar el mouse */
+.back-link:hover,
+.send-link:hover {
+  color: #ffffffcf;
 }
 
-.back-link:hover .icon, .send-link:hover .icon {
-  color: #ffffffcf; /* Color suave y claro en el ícono al pasar el mouse */
+.back-link:hover .icon,
+.send-link:hover .icon {
+  color: #ffffffcf;
 }
 
-/* Efecto active en los enlaces y sus íconos */
-.back-link:active, .send-link:active {
-  color: #adadad; /* Color más suave al hacer clic */
+.back-link:active,
+.send-link:active {
+  color: #adadad;
 }
 
-.back-link:active .icon, .send-link:active .icon {
-  color: #adadad; /* Color más suave en el ícono al hacer clic */
+.back-link:active .icon,
+.send-link:active .icon {
+  color: #adadad;
 }
 
-/* Estilo del ícono y texto */
 .back-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  font-size: 20px; /* Tamaño del texto */
+  font-size: 20px;
   text-decoration: none;
   margin-right: 30px;
   padding: 10px;
   font-weight: bold;
 }
 
-/* Estilo del ícono dentro del enlace */
 .back-icon mat-icon {
-  font-size: 24px; /* Tamaño del ícono */
-  margin-right: 8px; /* Espacio entre el ícono y el texto */
-  transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
-  font-weight: bold; 
+  font-size: 24px;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+  font-weight: bold;
 }
 
-/* Efecto de hover sobre todo el enlace */
 .back-icon:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de todo el conjunto */
+  transform: scale(1.1);
 }
 
-/* Efecto de hover sobre el ícono */
 .back-icon mat-icon:hover {
-  transform: scale(1.2); /* Efecto de zoom solo para el ícono */
+  transform: scale(1.2);
 }
 
-/* Efecto de hover sobre el texto */
 .back-icon:hover span {
-  font-weight: bold; /* Hace que el texto se ponga en negrita al pasar el ratón */
+  font-weight: bold;
 }
 
-/* Fondo semitransparente */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Asegúrate de que esté encima de otros elementos */
+  z-index: 9999;
 }
 
-/* Estilo para el modal (formulario) */
 .client-form-modal {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 300px; /* Ajusta el tamaño del modal */
+  width: 300px;
   text-align: center;
 }
-/* Superposición para deshabilitar el fondo */
+
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
-  z-index: 999; /* Debajo del formulario */
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
 }
 
-/* Contenedor del formulario */
 .formulario-container {
   position: fixed;
   top: 50%;
@@ -354,14 +332,12 @@
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  z-index: 1000; /* Encima de la superposición */
-  font-family: 'Arial', sans-serif;
+  z-index: 1000;
+  font-family: "Arial", sans-serif;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-
-/* Resto de tus estilos */
 
 h2 {
   text-align: center;
@@ -370,7 +346,6 @@ h2 {
   color: #333;
 }
 
-/* Estilo de los inputs */
 input {
   width: 100%;
   padding: 12px;
@@ -378,15 +353,14 @@ input {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+  box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
 
-/* Botones */
 button {
   width: 100%;
   padding: 12px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 4px;
@@ -401,14 +375,13 @@ button[type="submit"]:hover {
 }
 
 button[type="button"] {
-  background-color: #f44336; /* Color rojo para cancelar */
+  background-color: #f44336;
 }
 
 button[type="button"]:hover {
   background-color: #e53935;
 }
 
-/* Estilo para el botón desactivado */
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
@@ -419,24 +392,24 @@ button:disabled:hover {
 }
 
 select {
-  width: 100%; /* Se ajusta al contenedor */
-  padding: 10px; /* Espaciado interno */
-  border: 1px solid #ccc; /* Borde gris claro */
-  border-radius: 8px; /* Bordes redondeados */
-  background-color: #f9f9f9; /* Fondo claro */
-  font-size: 16px; /* Tamaño de fuente */
-  color: #333; /* Color de texto */
-  outline: none; /* Elimina el borde azul predeterminado */
-  transition: border-color 0.3s, box-shadow 0.3s; /* Efectos suaves */
-  margin-top:5px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  margin-top: 5px;
 }
 
 select:focus {
-  border-color: #007BFF; /* Color del borde al hacer clic (azul) */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efecto de sombra */
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 select:hover {
-  background-color: #f0f0f0; /* Cambio de fondo al pasar el ratón */
-  cursor: pointer; /* Cambia el cursor a mano */
+  background-color: #f0f0f0;
+  cursor: pointer;
 }

@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
@@ -6,16 +7,32 @@ import { Injectable } from '@angular/core';
 export class ListaService {
   private productosEnLista: any[] = [];
 
-  constructor() {
-    // Recuperar la lista desde localStorage al inicializar el servicio
-    const listaGuardada = localStorage.getItem('listaProductos');
-    if (listaGuardada) {
-      this.productosEnLista = JSON.parse(listaGuardada);
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)) {
+      try {
+        const listaGuardada = localStorage.getItem('listaProductos');
+        if (listaGuardada) {
+          this.productosEnLista = JSON.parse(listaGuardada);
+        }
+      } catch (e) {
+        console.error('Error al acceder a localStorage:', e);
+      }
+    } else {
+      console.warn('localStorage is not available');
     }
   }
 
   private guardarEnLocalStorage(): void {
-    localStorage.setItem('listaProductos', JSON.stringify(this.productosEnLista));
+    if (isPlatformBrowser(this.platformId)) {
+      // Safe to use localStorage
+      const listaGuardada = localStorage.getItem('listaProductos');
+      if (listaGuardada) {
+        this.productosEnLista = JSON.parse(listaGuardada);
+      }
+    } else {
+      console.warn('localStorage is not available');
+    }
+    
   }
 
   agregarProducto(producto: any) {
