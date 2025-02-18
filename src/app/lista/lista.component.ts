@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import axios from 'axios'; // Importar axios
 import { PdfMonkeyService } from '../pdf-monkey.service'; // Importar el servicio
 import { HttpClient } from '@angular/common/http'; // Importar HttpClient
-import { SlackService } from '../slack.service'; // Importar el servicio de Slack
+// import { SlackService } from '../slack.service'; // Eliminar la importación del servicio de Slack
 
 @Component({
   selector: 'app-lista',
@@ -22,7 +22,7 @@ export class ListaComponent {
   showClientForm: boolean = false;
   clientData = { firstName: '', lastName: '', email: '', sucursal: '' }; // Datos del cliente
 
-  constructor(private listaService: ListaService, private http: HttpClient, private slackService: SlackService) {} // Inyectar SlackService
+  constructor(private listaService: ListaService, private http: HttpClient) {} // Eliminar la inyección del servicio de Slack
 
   ngOnInit() {
     this.productosEnLista = this.listaService.obtenerLista();
@@ -151,21 +151,8 @@ export class ListaComponent {
           if (documentStatus === 'success') {
             const pdfUrl = statusResponse.data?.document?.download_url;
             if (pdfUrl) {
-              // Preparar el mensaje para Slack
-              const slackMessage = `Nuevo pedido recibido:
-Cliente: ${invoiceData.clientName}
-Factura N.º: ${invoiceData.invoiceNumber}
-Sucursal: ${invoiceData.clientSucursal}
-Fecha: ${invoiceData.orderDate}
-Ver factura: ${pdfUrl}`;
-
-              // Enviar notificación a Slack a través del servicio de Slack
-              try {
-                const response = await this.slackService.notify(slackMessage).toPromise();
-                console.log('Notificación enviada a Slack:', response);
-              } catch (error) {
-                console.error('Error al enviar notificación a Slack:', error);
-              }
+              console.log('PDF generado:', pdfUrl);
+              window.open(pdfUrl, '_blank');  // Abre el PDF en una nueva pestaña
             } else {
               console.error('No se encontró la URL de descarga del PDF.');
             }

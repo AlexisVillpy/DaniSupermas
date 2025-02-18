@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "lint": "eslint . --ext .js,.ts",
     "serve:ssr:Catalogoilmondo": "node dist/catalogoilmondo/server/server.mjs"
   },
   "private": true,
@@ -27,6 +28,7 @@
     "cors": "^2.8.5",
     "ejs": "^3.1.10",
     "express": "^4.18.2",
+    "firebase-functions": "^6.3.2",
     "jspdf": "^2.5.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -40,6 +42,7 @@
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
     "angular-cli-ghpages": "^2.0.3",
+    "eslint": "^9.20.1",
     "jasmine-core": "~5.4.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
