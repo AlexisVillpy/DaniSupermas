@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { ListaService } from '../lista.service';
 
 @Component({
   selector: 'app-inicio-catalogo',
@@ -20,8 +21,8 @@ import { RouterModule } from '@angular/router';
   ],
 })
 export class InicioCatalogoComponent implements OnInit, AfterViewInit {
-  productos: any[] = [];
-  productosFiltrados: any[] = [];
+  productos: any[] = []; // Lista de productos
+  productosFiltrados: any[] = []; // Productos filtrados por búsqueda/categoría
   searchTerm: string = '';
   selectedCategory: string = '';
   categorias: string[] = [
@@ -35,7 +36,7 @@ export class InicioCatalogoComponent implements OnInit, AfterViewInit {
 
   isLoading: boolean = true; // Controla la visibilidad del preloader
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private listaService: ListaService) {}
 
   ngOnInit(): void {
     this.cargarProductos();
@@ -48,7 +49,7 @@ export class InicioCatalogoComponent implements OnInit, AfterViewInit {
   }
 
   cargarProductos(): void {
-    this.isLoading = true; 
+    this.isLoading = true;
     this.http.get<any[]>('assets/productos.json').subscribe({
       next: (response) => {
         if (response && response.length > 0) {
@@ -62,7 +63,7 @@ export class InicioCatalogoComponent implements OnInit, AfterViewInit {
         console.error('Error al cargar productos:', error);
       },
       complete: () => {
-        this.isLoading = false; 
+        this.isLoading = false;
       },
     });
   }
@@ -81,6 +82,18 @@ export class InicioCatalogoComponent implements OnInit, AfterViewInit {
 
       return coincideBusqueda && coincideCategoria;
     });
+  }
+
+  agregarALista(producto: any): void {
+    if (this.productoSeleccionado(producto)) {
+      this.listaService.eliminarProducto(producto);
+    } else {
+      this.listaService.agregarProducto(producto);
+    }
+  }
+
+  productoSeleccionado(producto: any): boolean {
+    return this.listaService.obtenerLista().some((item) => item.nombre === producto.nombre);
   }
 
   onCategoryChange(): void {
