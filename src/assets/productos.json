@@ -348,13 +348,6 @@
       "categoria": "Café"
     },
     {
-      "nombre": "CAFE NOBLE ESSENCE GOLD 100GR",
-      "foto": "assets/fotos-productos/NobleessenceGold.png",
-      "precio":25900,
-      "caja":"12 u/caja",
-      "categoria": "Café"
-    },
-    {
       "nombre": "ACEITE DE OLIVA EXTRA VIRGEN 5L LATA",
       "foto": "assets/fotos-productos/Aceitevirgen5lPietro.png",
       "precio":648207,
