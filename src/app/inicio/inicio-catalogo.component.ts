@@ -84,18 +84,6 @@ export class InicioCatalogoComponent implements OnInit, AfterViewInit {
     });
   }
 
-  agregarALista(producto: any): void {
-    if (this.productoSeleccionado(producto)) {
-      this.listaService.eliminarProducto(producto);
-    } else {
-      this.listaService.agregarProducto(producto);
-    }
-  }
-
-  productoSeleccionado(producto: any): boolean {
-    return this.listaService.obtenerLista().some((item) => item.nombre === producto.nombre);
-  }
-
   onCategoryChange(): void {
     this.filtrarProductos();
   }
