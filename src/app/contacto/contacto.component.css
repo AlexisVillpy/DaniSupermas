@@ -3,7 +3,7 @@
   color: white;
   text-align: center;
   padding: 10px 20px;
-  background: linear-gradient(45deg, #2d6cb9, #1d3557);
+  background: linear-gradient(45deg, #7e57c2, #4a148c); /* Gradiente lila */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -19,6 +19,7 @@
   vertical-align: middle;
   color: white;
 }
+
 /* Estilo del ícono y texto */
 .back-icon {
   display: flex;
@@ -29,7 +30,7 @@
   text-decoration: none;
   margin-right: 30px;
   padding: 10px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 /* Estilo del ícono dentro del enlace */
@@ -37,7 +38,6 @@
   font-size: 24px; /* Tamaño del ícono */
   margin-right: 8px; /* Espacio entre el ícono y el texto */
   transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
-  font-weight: bold; 
 }
 
 /* Efecto de hover sobre todo el enlace */
@@ -55,7 +55,6 @@
   font-weight: bold; /* Hace que el texto se ponga en negrita al pasar el ratón */
 }
 
-
 .catalogo-container {
   margin-top: 75px;
   text-align: center;
@@ -71,21 +70,23 @@
 .dropdown-container select {
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #d1d1d1; /* Borde gris claro */
   border-radius: 8px;
-  background-color: #fff;
-  color: #333;
+  background-color: transparent; /* Fondo transparente */
+  color: #333; /* Texto más oscuro */
   width: 190px;
   min-width: 170px;
   cursor: pointer;
 }
 
 .dropdown-container select:hover {
-  border-color: #3181d2;
+  border-color: #d1d1d1; /* Borde gris claro al pasar el mouse */
 }
 
 .dropdown-container option {
   padding: 8px;
+  background-color: #fff; /* Fondo blanco para las opciones */
+  color: #333; /* Texto más oscuro */
 }
 
 .whatsapp-container {
@@ -98,7 +99,7 @@
   align-items: center;
   margin-top: 10px;
   padding: 10px 15px;
-  background-color: #1fcd5f;
+  background-color: #7e57c2; /* Fondo lila */
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -108,7 +109,7 @@
 }
 
 .btn-whatsapp:hover {
-  background-color: #1da851;
+  background-color: #4a148c; /* Fondo lila oscuro */
 }
 
 .whatsapp-icon {

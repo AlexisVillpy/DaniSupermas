@@ -25,16 +25,15 @@ export class InicioCatalogoComponent implements OnInit, AfterViewInit {
   productosFiltrados: any[] = []; // Productos filtrados por búsqueda/categoría
   searchTerm: string = '';
   selectedCategory: string = '';
-  categorias: string[] = [
-    'Cerveza',
-    'Aloe Vera',
-    'Café',
-    'San Sebastián',
-    'Smoothie',
-    'Pietro Coricelli',
-  ];
+  selectedOrder: string = ''; // Nuevo campo para el orden seleccionado
+  categorias: string[] = ['Negro', 'Blanco', 'Amarillo', 'Verde']; // Cambiado a colores
+  materiales: string[] = ['BD', 'AD']; // Nuevo filtro para materiales
+  selectedMaterial: string = ''; // Nuevo campo para el material seleccionado
+  litros: string[] = ['100lts', '150lts', '200lts', '250lts', '300lts']; // Nuevo filtro para litros
+  selectedLitros: string = ''; // Nuevo campo para los litros seleccionados
 
   isLoading: boolean = true; // Controla la visibilidad del preloader
+  selectedProduct: any = null; // Producto seleccionado para mostrar en el modal
 
   constructor(private http: HttpClient, private listaService: ListaService) {}
 
@@ -73,18 +72,54 @@ export class InicioCatalogoComponent implements OnInit, AfterViewInit {
     this.productosFiltrados = this.productos.filter((producto) => {
       const coincideBusqueda =
         producto.nombre.toLowerCase().includes(termino) ||
-        producto.precio.toString().includes(termino) ||
-        producto.caja.toString().includes(termino);
+        producto.precio.toString().includes(termino) || // Asegurar que se use el campo 'precio'
+        producto.caja.toLowerCase().includes(termino);
 
       const coincideCategoria = this.selectedCategory
-        ? producto.categoria === this.selectedCategory
+        ? producto.color.toLowerCase() === this.selectedCategory.toLowerCase()
         : true;
 
-      return coincideBusqueda && coincideCategoria;
+      const coincideMaterial = this.selectedMaterial
+        ? producto.material.toLowerCase() === this.selectedMaterial.toLowerCase()
+        : true;
+
+      const coincideLitros = this.selectedLitros
+        ? producto.litros.toLowerCase() === this.selectedLitros.toLowerCase()
+        : true;
+
+      return coincideBusqueda && coincideCategoria && coincideMaterial && coincideLitros;
     });
+
+    // Ordenar los productos filtrados si se seleccionó un orden
+    if (this.selectedOrder === 'asc') {
+      this.productosFiltrados.sort((a, b) => a.precio - b.precio); // Usar 'precio' para ordenar
+    } else if (this.selectedOrder === 'desc') {
+      this.productosFiltrados.sort((a, b) => b.precio - a.precio); // Usar 'precio' para ordenar
+    }
   }
 
   onCategoryChange(): void {
     this.filtrarProductos();
+  }
+
+  onOrderChange(): void {
+    this.filtrarProductos(); // Reaplicar el filtro y orden
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Desplazamiento suave
+    });
+  }
+
+  // Método para abrir el modal con los detalles del producto
+  verDetalles(producto: any): void {
+    this.selectedProduct = producto;
+  }
+
+  // Método para cerrar el modal
+  cerrarModal(): void {
+    this.selectedProduct = null;
   }
 }

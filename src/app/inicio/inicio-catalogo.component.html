@@ -10,7 +10,9 @@
   <div class="banner">
     <!-- Contenedor del logo principal -->
     <div class="logo-container">
-      <img src="assets/iconosylogos/logoilmondo.png" alt="Logo Ilmondo" />
+      <a href="javascript:void(0)" (click)="scrollToTop()"> <!-- Llamar a la función de desplazamiento -->
+        <img src="assets/iconosylogos/logoilmondo.png" alt="Logo Ilmondo" />
+      </a>
     </div>
 
     <!-- Botón de contacto -->
@@ -48,20 +50,62 @@
         />
       </div>
 
-      <!-- Desplegable Categorías -->
-      <div class="dropdown-container">
-        <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
-          <option value="">Todas las categorías</option>
-          <option *ngFor="let categoria of categorias" [value]="categoria">
-            {{ categoria }}
-          </option>
-        </select>
+      <!-- Contenedor para los filtros -->
+      <div class="dropdown-group">
+        <!-- Filtro por colores -->
+        <div class="dropdown-container">
+          <select class="category-dropdown" [(ngModel)]="selectedCategory" (change)="filtrarProductos()">
+            <option value="">Colores</option>
+            <option *ngFor="let categoria of categorias" [value]="categoria">
+              {{ categoria }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Filtro por materiales -->
+        <div class="dropdown-container">
+          <select class="order-dropdown" [(ngModel)]="selectedMaterial" (change)="filtrarProductos()">
+            <option value="">Materiales</option>
+            <option *ngFor="let material of materiales" [value]="material">
+              {{ material }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Filtro por litros -->
+        <div class="dropdown-container">
+          <select class="order-dropdown" [(ngModel)]="selectedLitros" (change)="filtrarProductos()">
+            <option value="">Litros</option>
+            <option *ngFor="let litro of litros" [value]="litro">
+              {{ litro }}
+            </option>
+          </select>
+        </div>
       </div>
     </div>
 
     <!-- Mensaje de carga -->
     <div *ngIf="productosFiltrados.length === 0">
       <p class="loading-text">No se encontraron productos.</p>
+    </div>
+
+    <!-- Modal para detalles del producto -->
+    <div *ngIf="selectedProduct">
+      <!-- Fondo oscuro -->
+      <div class="modal-overlay" (click)="cerrarModal()"></div>
+      
+      <!-- Ventana modal -->
+      <div class="modal">
+        <div class="modal-content">
+          <span class="close-button" (click)="cerrarModal()">&times;</span>
+          <img [src]="selectedProduct.foto" alt="{{ selectedProduct.nombre }}" class="modal-image" />
+          <h3>{{ selectedProduct.nombre }}</h3>
+          <p><strong>Material:</strong> {{ selectedProduct.material }}</p>
+          <p><strong>Medidas:</strong> {{ selectedProduct.medidas }}</p>
+          <p><strong>Peso gr/u:</strong> {{ selectedProduct['peso gr/u'] }}</p>
+          <p><strong>Color:</strong> {{ selectedProduct.color }}</p>
+        </div>
+      </div>
     </div>
 
     <!-- Contenedor de tarjetas -->
@@ -74,12 +118,11 @@
         <div class="card-body">
           <h3 class="card-title">{{ producto.nombre }}</h3>
           <p class="card-price">
-            Precio c/u:
-            <span class="price-number">{{ producto.precio | number }}</span>
-            <span class="price-currency">gs</span>
+            <span class="price-label">Precio c/u:</span> 
+            <span class="price-number"><strong>{{ producto.precio | number }} gs</strong></span>
           </p>
           <p class="card-box">Unidades: {{ producto.caja }}</p>
-          <button>
+          <button (click)="verDetalles(producto)">
             Detalle
           </button>
         </div>

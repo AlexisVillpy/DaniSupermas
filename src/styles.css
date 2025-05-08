@@ -5,7 +5,8 @@
   left: 0;
   width: 100%;
   height: 75px;
-  background-color: #1d3557;
+  background-color: #4a148c; /* Fondo lila oscuro */
+  color: white; /* Texto blanco */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -165,8 +166,8 @@ body {
     flex: 1;
   }
   footer {
-    background-color: #1d3557;
-    color: #ffffff;
+    background-color: #4a148c; /* Fondo lila oscuro */
+    color: white; /* Texto blanco */
     padding: 20px 0;
     text-align: center;
     font-size: 14px;
