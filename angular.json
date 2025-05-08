@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Catalogoilmondo": {
+    "DaniSupermas": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/catalogoilmondo",
+            "outputPath": "dist/DaniSupermas",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -66,7 +66,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/catalogoilmondo/server",
+            "outputPath": "dist/DaniSupermas/server",
             "main": "src/main.server.ts",
             "tsConfig": "tsconfig.server.json"
           },
@@ -88,10 +88,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "Catalogoilmondo:build:production"
+              "buildTarget": "DaniSupermas:build:production"
             },
             "development": {
-              "buildTarget": "Catalogoilmondo:build:development"
+              "buildTarget": "DaniSupermas:build:development"
             }
           },
           "defaultConfiguration": "development"

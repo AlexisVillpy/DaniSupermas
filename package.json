@@ -1,5 +1,5 @@
 {
-  "name": "catalogoilmondo",
+  "name": "DaniSupermas",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "eslint . --ext .js,.ts",
-    "serve:ssr:Catalogoilmondo": "node dist/catalogoilmondo/server/server.mjs"
+    "serve:ssr:DaniSupermas": "node dist/DaniSupermas/server/server.mjs"
   },
   "private": true,
   "dependencies": {
