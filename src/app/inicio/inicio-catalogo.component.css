@@ -175,8 +175,10 @@ body {
 /* Ajustes para el dropdown */
 .search-categories-container {
   display: flex;
-  justify-content: space-between; /* Mantener el campo de búsqueda a la izquierda */
+  justify-content: space-between; /* Alinear el buscador a la izquierda y los desplegables a la derecha */
   align-items: center;
+  gap: 10px; /* Espacio entre el buscador y los desplegables */
+  margin-top: 20px;
 }
 
 .dropdown-container select {
@@ -261,23 +263,25 @@ body {
     margin-bottom: 0px;
   }
 
+  .search-categories-container {
+    display: flex;
+    flex-direction: column-reverse; /* Cambiar el orden: desplegables encima del buscador */
+    align-items: center;
+    gap: 8px; /* Reducir el espacio entre elementos */
+      margin-top: 20px;
+  }
+
   .search-input {
-    width: 120px;
-    padding: 8px 32px;
+    font-size: 15px;
+    width: 132px;
+    padding: 8px 33px;
     margin-left: 0px;
     margin-top: -20px;
   }
 
-  .search-categories-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px; /* Reducir el espacio entre elementos */
-  }
-
   .search-icon {
     position: relative;
-    left: -90px;
+    left: -95px;
     transform: translateY(115%);
     color: #a1a1a1;
     font-size: 18px; /* Reducir el tamaño del ícono */
@@ -287,46 +291,39 @@ body {
   .search-container {
     position: relative;
     width: 200px; /* Reducir el ancho del contenedor de búsqueda */
+    margin-bottom: 10px;
+    margin-top: -10px;
   }
 
   /* Reducir el tamaño de todos los desplegables */
   .dropdown-container select {
-    font-size: 12px; /* Reducir el tamaño de la fuente */
-    height: 28px; /* Reducir la altura */
+    font-size: 16px; /* Reducir el tamaño de la fuente */
+    height: 30px; /* Reducir la altura */
     max-width: 70px; /* Establecer el mismo ancho máximo para todos */
     padding: 4px; /* Reducir el relleno interno */
   }
-    /* Reducir el tamaño de todos los desplegables */
-    .dropdown-container select {
-      font-size: 12px; /* Reducir el tamaño de la fuente */
-      height: 28px; /* Reducir la altura */
-      max-width: 70px; /* Establecer el mismo ancho máximo para todos */
-      padding: 4px; /* Reducir el relleno interno */
-    }
-  
-    /* Ajustar el tamaño del desplegable de "litros" */
-    .dropdown-container.litros select {
-      width: 60px; /* Establecer un ancho fijo */
-      max-width: 60px; /* Asegurar que no exceda este ancho */
-      min-width: 60px; /* Asegurar que no sea más pequeño */
-    }
-  
-    /* Ajustar el tamaño del desplegable de "colores" */
-    .dropdown-container.colores select {
-      width: 60px; /* Establecer un ancho fijo */
-      max-width: 100px; /* Asegurar que no exceda este ancho */
-      min-width: 72px; /* Asegurar que no sea más pequeño */
-    }
-  
-    /* Ajustar el tamaño del desplegable de "materiales" */
-    .dropdown-container.materiales select {
-      width: 60px; /* Establecer un ancho fijo */
-      max-width: 100px; /* Asegurar que no exceda este ancho */
-      min-width: 85px; /* Asegurar que no sea más pequeño */
-    }
-    .dropdown-group {
-      margin-left: 30px; /* Aplicar margen izquierdo al grupo de desplegables */
-    }
+
+  /* Ajustar el tamaño del desplegable de "litros" */
+  .dropdown-container.litros select {
+    width: 60px; /* Establecer un ancho fijo */
+    min-width: 80px; /* Asegurar que no sea más pequeño */
+  }
+
+  /* Ajustar el tamaño del desplegable de "colores" */
+  .dropdown-container.colores select {
+    width: 60px; /* Establecer un ancho fijo */
+    min-width: 95px; /* Asegurar que no sea más pequeño */
+  }
+
+  /* Ajustar el tamaño del desplegable de "materiales" */
+  .dropdown-container.materiales select {
+    width: 60px; /* Establecer un ancho fijo */
+    min-width: 110px; /* Asegurar que no sea más pequeño */
+  }
+
+  .dropdown-group {
+    margin-left: 30px; /* Aplicar margen izquierdo al grupo de desplegables */
+  }
 }
 
 /* Preloader (spinner) */
@@ -487,5 +484,33 @@ body {
 
   .close-button {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 373px) {
+  .dropdown-container select {
+    font-size: 12px; /* Reducir el tamaño de la fuente */
+    height: 26px; /* Reducir la altura */
+    max-width: 60px; /* Reducir el ancho máximo */
+    padding: 3px; /* Reducir el relleno interno */
+  }
+
+  .dropdown-container.litros select {
+    width: 50px; /* Establecer un ancho fijo más pequeño */
+    min-width: 60px; /* Asegurar que no sea más pequeño */
+  }
+
+  .dropdown-container.colores select {
+    width: 50px; /* Establecer un ancho fijo más pequeño */
+    min-width: 70px; /* Asegurar que no sea más pequeño */
+  }
+
+  .dropdown-container.materiales select {
+    width: 50px; /* Establecer un ancho fijo más pequeño */
+    min-width: 85px; /* Asegurar que no sea más pequeño */
+  }
+
+  .search-categories-container {
+    gap: 6px; /* Reducir el espacio entre elementos */
   }
 }
