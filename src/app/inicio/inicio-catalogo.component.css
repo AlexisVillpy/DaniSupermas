@@ -15,7 +15,7 @@ body {
 
 .card {
   background-color: transparent; /* Fondo transparente */
-  border: 1px solid #d1c4e9; /* Borde lila suave */
+  border: 1px solid #d8d8d8; /* Cambiar a gris oscuro */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -272,8 +272,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    width: 100%;
+    gap: 8px; /* Reducir el espacio entre elementos */
   }
 
   .search-icon {
@@ -281,32 +280,53 @@ body {
     left: -90px;
     transform: translateY(115%);
     color: #a1a1a1;
-    font-size: 20px;
+    font-size: 18px; /* Reducir el tamaño del ícono */
     pointer-events: none;
-  }
-
-  .dropdown-group {
-    display: flex;
-    flex-direction: column-reverse; /* Cambiar el orden: "Todas las categorías" primero */
-    align-items: center; /* Centrar los dropdowns */
-    gap: 10px; /* Espacio entre los dropdowns */
-    position: relative; /* Permitir ajustes de posición */
-  }
-
-  .category-dropdown {
-    width: auto; /* Mantener su tamaño original */
-    position: relative; /* Permitir ajustes de posición */
-    left: 20px; /* Mover hacia la izquierda */
-  }
-
-  .dropdown-container select {
-    margin: 0px;
   }
 
   .search-container {
     position: relative;
-    width: 220px;
+    width: 200px; /* Reducir el ancho del contenedor de búsqueda */
   }
+
+  /* Reducir el tamaño de todos los desplegables */
+  .dropdown-container select {
+    font-size: 12px; /* Reducir el tamaño de la fuente */
+    height: 28px; /* Reducir la altura */
+    max-width: 70px; /* Establecer el mismo ancho máximo para todos */
+    padding: 4px; /* Reducir el relleno interno */
+  }
+    /* Reducir el tamaño de todos los desplegables */
+    .dropdown-container select {
+      font-size: 12px; /* Reducir el tamaño de la fuente */
+      height: 28px; /* Reducir la altura */
+      max-width: 70px; /* Establecer el mismo ancho máximo para todos */
+      padding: 4px; /* Reducir el relleno interno */
+    }
+  
+    /* Ajustar el tamaño del desplegable de "litros" */
+    .dropdown-container.litros select {
+      width: 60px; /* Establecer un ancho fijo */
+      max-width: 60px; /* Asegurar que no exceda este ancho */
+      min-width: 60px; /* Asegurar que no sea más pequeño */
+    }
+  
+    /* Ajustar el tamaño del desplegable de "colores" */
+    .dropdown-container.colores select {
+      width: 60px; /* Establecer un ancho fijo */
+      max-width: 100px; /* Asegurar que no exceda este ancho */
+      min-width: 72px; /* Asegurar que no sea más pequeño */
+    }
+  
+    /* Ajustar el tamaño del desplegable de "materiales" */
+    .dropdown-container.materiales select {
+      width: 60px; /* Establecer un ancho fijo */
+      max-width: 100px; /* Asegurar que no exceda este ancho */
+      min-width: 85px; /* Asegurar que no sea más pequeño */
+    }
+    .dropdown-group {
+      margin-left: 30px; /* Aplicar margen izquierdo al grupo de desplegables */
+    }
 }
 
 /* Preloader (spinner) */

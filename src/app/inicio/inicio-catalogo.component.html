@@ -11,7 +11,7 @@
     <!-- Contenedor del logo principal -->
     <div class="logo-container">
       <a href="javascript:void(0)" (click)="scrollToTop()"> <!-- Llamar a la función de desplazamiento -->
-        <img src="assets/iconosylogos/logoilmondo.png" alt="Logo Ilmondo" />
+        <img src="assets/iconosylogos/logoilmondo.png" alt="Logo Karai Vosa" />
       </a>
     </div>
 
@@ -52,8 +52,8 @@
 
       <!-- Contenedor para los filtros -->
       <div class="dropdown-group">
-        <!-- Filtro por colores -->
-        <div class="dropdown-container">
+        <!-- Desplegable de colores -->
+        <div class="dropdown-container colores">
           <select class="category-dropdown" [(ngModel)]="selectedCategory" (change)="filtrarProductos()">
             <option value="">Colores</option>
             <option *ngFor="let categoria of categorias" [value]="categoria">
@@ -62,8 +62,8 @@
           </select>
         </div>
 
-        <!-- Filtro por materiales -->
-        <div class="dropdown-container">
+        <!-- Desplegable de materiales -->
+        <div class="dropdown-container materiales">
           <select class="order-dropdown" [(ngModel)]="selectedMaterial" (change)="filtrarProductos()">
             <option value="">Materiales</option>
             <option *ngFor="let material of materiales" [value]="material">
@@ -72,8 +72,8 @@
           </select>
         </div>
 
-        <!-- Filtro por litros -->
-        <div class="dropdown-container">
+        <!-- Desplegable de litros -->
+        <div class="dropdown-container litros">
           <select class="order-dropdown" [(ngModel)]="selectedLitros" (change)="filtrarProductos()">
             <option value="">Litros</option>
             <option *ngFor="let litro of litros" [value]="litro">

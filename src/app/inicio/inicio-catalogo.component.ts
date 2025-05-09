@@ -1,7 +1,7 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
@@ -35,7 +35,11 @@ export class InicioCatalogoComponent implements OnInit, AfterViewInit {
   isLoading: boolean = true; // Controla la visibilidad del preloader
   selectedProduct: any = null; // Producto seleccionado para mostrar en el modal
 
-  constructor(private http: HttpClient, private listaService: ListaService) {}
+  constructor(
+    private http: HttpClient,
+    private listaService: ListaService,
+    @Inject(PLATFORM_ID) private platformId: Object // Inyectar PLATFORM_ID
+  ) {}
 
   ngOnInit(): void {
     this.cargarProductos();
@@ -48,23 +52,28 @@ export class InicioCatalogoComponent implements OnInit, AfterViewInit {
   }
 
   cargarProductos(): void {
-    this.isLoading = true;
-    this.http.get<any[]>('assets/productos.json').subscribe({
-      next: (response) => {
-        if (response && response.length > 0) {
-          this.productos = response;
-          this.productosFiltrados = response;
-        } else {
-          console.warn('No se encontraron productos.');
-        }
-      },
-      error: (error) => {
-        console.error('Error al cargar productos:', error);
-      },
-      complete: () => {
-        this.isLoading = false;
-      },
-    });
+    if (isPlatformBrowser(this.platformId)) { // Verificar si estamos en el navegador
+      this.isLoading = true;
+      this.http.get<any[]>('/DaniSupermas/assets/productos.json').subscribe({
+        next: (response) => {
+          if (response && response.length > 0) {
+            this.productos = response.map(producto => ({
+              ...producto,
+              foto: `/DaniSupermas/${producto.foto}` // Ajustar la ruta de las imágenes
+            }));
+            this.productosFiltrados = this.productos;
+          } else {
+            console.warn('No se encontraron productos.');
+          }
+        },
+        error: (error) => {
+          console.error('Error al cargar productos:', error);
+        },
+        complete: () => {
+          this.isLoading = false;
+        },
+      });
+    }
   }
 
   filtrarProductos(): void {
