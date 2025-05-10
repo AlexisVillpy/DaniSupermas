@@ -1,7 +1,7 @@
 [
     {
       "nombre": "KARAI VOSA 40LTS",
-      "foto": "assets/fotos-productos/KARAIVOSA40LTS.png",
+      "foto": "assets/fotos-productos/KARAIVOSA40LTS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"40lts",
@@ -12,7 +12,7 @@
     },
     {
       "nombre": "KARAI VOSA 50LTS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_50LTS.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_50LTS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"50lts",
@@ -23,7 +23,7 @@
     },
     {
       "nombre": "KARAI VOSA 60LTS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_60LTS.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_60LTS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"60lts",
@@ -34,7 +34,7 @@
     },
     {
       "nombre": "KARAI VOSA 70LTS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_70LTS.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_70LTS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"70lts",
@@ -45,7 +45,7 @@
     },
     {
       "nombre": "KARAI VOSA 80LTS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_80LTS.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_80LTS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"80lts",
@@ -56,7 +56,7 @@
     },
     {
       "nombre": "KARAI VOSA 100LTS ECONOMICAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_ECONOMICAS.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_ECONOMICAS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"100lts",
@@ -67,7 +67,7 @@
     },
     {
       "nombre": "KARAI VOSA 100LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_REFORZADAS.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_REFORZADAS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"100lts",
@@ -78,7 +78,7 @@
     },
     {
       "nombre": "KARAI VOSA 100LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_REFORZADAS_AMARILLO.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_REFORZADAS_AMARILLO.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"100lts",
@@ -89,7 +89,7 @@
     },
     {
       "nombre": "KARAI VOSA 100LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_REFORZADAS_VERDE.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_REFORZADAS_VERDE.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"100lts",
@@ -100,7 +100,7 @@
     },
     {
       "nombre": "KARAI VOSA 150LTS ECONOMICAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_ECONOMICAS.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_ECONOMICAS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"150lts",
@@ -111,7 +111,7 @@
     },
     {
       "nombre": "KARAI VOSA 150LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_REFORZADAS.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_REFORZADAS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"150lts",
@@ -122,7 +122,7 @@
     },
     {
       "nombre": "KARAI VOSA 150LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_REFORZADAS_VERDE.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_REFORZADAS_VERDE.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"150lts",
@@ -133,7 +133,7 @@
     },
     {
       "nombre": "KARAI VOSA 150LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_REFORZADAS_AMARILLO.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_REFORZADAS_AMARILLO.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"150lts",
@@ -144,7 +144,7 @@
     },
     {
       "nombre": "KARAI VOSA 200LTS ECONOMICAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_ECONOMICAS.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_ECONOMICAS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"200lts",
@@ -155,7 +155,7 @@
     },
     {
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"200lts",
@@ -166,7 +166,7 @@
     },
     {
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_AMARILLO_CHICO.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_AMARILLO_CHICO.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"200lts",
@@ -177,7 +177,7 @@
     },
     {
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_VERDE_CHICO.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_VERDE_CHICO.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"200lts",
@@ -188,7 +188,7 @@
     },
     {
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_AMARILLO_GRANDE.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_AMARILLO_GRANDE.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"200lts",
@@ -199,7 +199,7 @@
     },
     {
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_VERDE_GRANDE.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_VERDE_GRANDE.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"200lts",
@@ -210,7 +210,7 @@
     },
     {
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_VERDE_GRANDE.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_VERDE_GRANDE.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"200lts",
@@ -221,7 +221,7 @@
     },
     {
       "nombre": "KARAI VOSA 250LTS REFORZADAS",
-      "foto": "assets/fotos-productos/KARAI_VOSA_250LTS_REFORZADAS_AMARILLO.png.png",
+      "foto": "assets/fotos-productos/KARAI_VOSA_250LTS_REFORZADAS_AMARILLO.webp",
       "precio": 0,
       "caja":"10 Unidades.",
       "litros":"250lts",
