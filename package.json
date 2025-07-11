@@ -1,15 +1,17 @@
 {
   "name": "DaniSupermas",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "lint": "eslint . --ext .js,.ts",
-    "serve:ssr:DaniSupermas": "node dist/DaniSupermas/server/server.mjs"
-  },
+"scripts": {
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "lint": "eslint . --ext .js,.ts",
+  "serve:ssr:DaniSupermas": "node dist/DaniSupermas/server/server.mjs",
+  "deploy": "ng build --prod --base-href \"/DaniSupermas/\" && npx angular-cli-ghpages --dir=dist/DaniSupermas"
+},
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.0.5",
