@@ -1,5 +1,6 @@
 [
     {
+      "codigo": 100001,
       "nombre": "KARAI VOSA 40LTS",
       "foto": "assets/fotos-productos/KARAIVOSA40LTS.png",
       "precio": 0,
@@ -11,6 +12,7 @@
       "color": "Negro"
     },
     {
+      "codigo": 100002,
       "nombre": "KARAI VOSA 50LTS",
       "foto": "assets/fotos-productos/KARAI_VOSA_50LTS.png",
       "precio": 0,
@@ -22,6 +24,7 @@
       "color": "Blanco"
     },
     {
+      "codigo": 100003,
       "nombre": "KARAI VOSA 60LTS",
       "foto": "assets/fotos-productos/KARAI_VOSA_60LTS.png",
       "precio": 0,
@@ -33,6 +36,7 @@
       "color": "Negro"
     },
     {
+      "codigo": 100004,
       "nombre": "KARAI VOSA 70LTS",
       "foto": "assets/fotos-productos/KARAI_VOSA_70LTS.png",
       "precio": 0,
@@ -44,6 +48,7 @@
       "color": "Negro"
     },
     {
+      "codigo": 100005,
       "nombre": "KARAI VOSA 80LTS",
       "foto": "assets/fotos-productos/KARAI_VOSA_80LTS.png",
       "precio": 0,
@@ -55,6 +60,7 @@
       "color": "Negro"
     },
     {
+      "codigo": 100006,
       "nombre": "KARAI VOSA 100LTS ECONOMICAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_ECONOMICAS.png",
       "precio": 0,
@@ -66,6 +72,7 @@
       "color": "Negro"
     },
     {
+      "codigo": 100007,
       "nombre": "KARAI VOSA 100LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_REFORZADAS.png",
       "precio": 0,
@@ -77,6 +84,7 @@
       "color": "Negro"
     },
     {
+      "codigo": 100008,
       "nombre": "KARAI VOSA 100LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_REFORZADAS_AMARILLO.png",
       "precio": 0,
@@ -88,6 +96,7 @@
       "color": "Amarillo"
     },
     {
+      "codigo": 100009,
       "nombre": "KARAI VOSA 100LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_100LTS_REFORZADAS_VERDE.png",
       "precio": 0,
@@ -99,6 +108,7 @@
       "color": "Verde"
     },
     {
+      "codigo": 100010,
       "nombre": "KARAI VOSA 150LTS ECONOMICAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_ECONOMICAS.png",
       "precio": 0,
@@ -110,6 +120,7 @@
       "color": "Negro"
     },
     {
+      "codigo": 100011,
       "nombre": "KARAI VOSA 150LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_REFORZADAS.png",
       "precio": 0,
@@ -121,6 +132,7 @@
       "color": "Negro"
     },
     {
+      "codigo": 100012,
       "nombre": "KARAI VOSA 150LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_REFORZADAS_VERDE.png",
       "precio": 0,
@@ -132,6 +144,7 @@
       "color": "Verde"
     },
     {
+      "codigo": 100013,
       "nombre": "KARAI VOSA 150LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_150LTS_REFORZADAS_AMARILLO.png",
       "precio": 0,
@@ -143,6 +156,7 @@
       "color": "Amarillo"
     },
     {
+      "codigo": 100014,
       "nombre": "KARAI VOSA 200LTS ECONOMICAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_ECONOMICAS.png",
       "precio": 0,
@@ -154,6 +168,7 @@
       "color": "Negro"
     },
     {
+      "codigo": 100015,
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS.png",
       "precio": 0,
@@ -165,6 +180,7 @@
       "color": "Negro"
     },
     {
+      "codigo": 100016,
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_AMARILLO_CHICO.png",
       "precio": 0,
@@ -176,6 +192,7 @@
       "color": "Amarillo"
     },
     {
+      "codigo": 100017,
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_VERDE_CHICO.png",
       "precio": 0,
@@ -187,6 +204,7 @@
       "color": "Verde"
     },
     {
+      "codigo": 100018,
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_AMARILLO_GRANDE.png",
       "precio": 0,
@@ -198,6 +216,7 @@
       "color": "Amarillo"
     },
     {
+      "codigo": 100019,
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_VERDE_GRANDE.png",
       "precio": 0,
@@ -209,6 +228,7 @@
       "color": "Verde"
     },
     {
+      "codigo": 100020,
       "nombre": "KARAI VOSA 200LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_200LTS_REFORZADAS_VERDE_GRANDE.png",
       "precio": 0,
@@ -220,6 +240,7 @@
       "color": "Verde"
     },
     {
+      "codigo": 100021,
       "nombre": "KARAI VOSA 250LTS REFORZADAS",
       "foto": "assets/fotos-productos/KARAI_VOSA_250LTS_REFORZADAS_AMARILLO.png.png",
       "precio": 0,
@@ -231,6 +252,7 @@
       "color": "Amarillo"
     },
     {
+      "codigo": 100022,
       "nombre": "KARAI VOSA 250LTS REFORZADAS",
       "foto": "assets/fotos-productos/",
       "precio": 0,
@@ -242,6 +264,7 @@
       "color": "Verde"
     },
     {
+      "codigo": 100023,
       "nombre": "KARAI VOSA 300LTS REFORZADAS",
       "foto": "assets/fotos-productos/",
       "precio": 0,
@@ -253,6 +276,7 @@
       "color": "Amarillo"
     },
     {
+      "codigo": 100024,
       "nombre": "KARAI VOSA 300LTS REFORZADAS",
       "foto": "assets/fotos-productos/",
       "precio": 0,

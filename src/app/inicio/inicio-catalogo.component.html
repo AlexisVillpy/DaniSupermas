@@ -11,7 +11,7 @@
     <!-- Contenedor del logo principal -->
     <div class="logo-container">
       <a href="javascript:void(0)" (click)="scrollToTop()"> <!-- Llamar a la función de desplazamiento -->
-        <img src="assets/iconosylogos/logoilmondo.png" alt="Logo Karai Vosa" />
+        <img src="assets/fotos-productos/LOGO-EMPRESA.png" alt="Logo Mave" />
       </a>
     </div>
 
@@ -117,10 +117,7 @@
         </div>
         <div class="card-body">
           <h3 class="card-title">{{ producto.nombre }}</h3>
-          <p class="card-price">
-            <span class="price-label">Precio c/u:</span> 
-            <span class="price-number"><strong>{{ producto.precio | number }} gs</strong></span>
-          </p>
+          <p class="card-box">Código: {{ producto.codigo }}</p>
           <p class="card-box">Unidades: {{ producto.caja }}</p>
           <button (click)="verDetalles(producto)">
             Detalle

@@ -3,7 +3,7 @@
   color: white;
   text-align: center;
   padding: 10px 20px;
-  background: linear-gradient(45deg, #7e57c2, #4a148c); /* Gradiente lila */
+  background: linear-gradient(45deg, #00dfa0, #009e75); /* Gradiente verde agua */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -26,33 +26,29 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  font-size: 20px; /* Tamaño del texto */
+  font-size: 20px;
   text-decoration: none;
   margin-right: 30px;
   padding: 10px;
   font-weight: bold;
 }
 
-/* Estilo del ícono dentro del enlace */
 .back-icon mat-icon {
-  font-size: 24px; /* Tamaño del ícono */
-  margin-right: 8px; /* Espacio entre el ícono y el texto */
-  transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+  font-size: 24px;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
 }
 
-/* Efecto de hover sobre todo el enlace */
 .back-icon:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de todo el conjunto */
+  transform: scale(1.1);
 }
 
-/* Efecto de hover sobre el ícono */
 .back-icon mat-icon:hover {
-  transform: scale(1.2); /* Efecto de zoom solo para el ícono */
+  transform: scale(1.2);
 }
 
-/* Efecto de hover sobre el texto */
 .back-icon:hover span {
-  font-weight: bold; /* Hace que el texto se ponga en negrita al pasar el ratón */
+  font-weight: bold;
 }
 
 .catalogo-container {
@@ -70,23 +66,23 @@
 .dropdown-container select {
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #d1d1d1; /* Borde gris claro */
+  border: 1px solid #d1d1d1;
   border-radius: 8px;
-  background-color: transparent; /* Fondo transparente */
-  color: #333; /* Texto más oscuro */
+  background-color: transparent;
+  color: #333;
   width: 190px;
   min-width: 170px;
   cursor: pointer;
 }
 
 .dropdown-container select:hover {
-  border-color: #d1d1d1; /* Borde gris claro al pasar el mouse */
+  border-color: #d1d1d1;
 }
 
 .dropdown-container option {
   padding: 8px;
-  background-color: #fff; /* Fondo blanco para las opciones */
-  color: #333; /* Texto más oscuro */
+  background-color: #fff;
+  color: #333;
 }
 
 .whatsapp-container {
@@ -99,7 +95,7 @@
   align-items: center;
   margin-top: 10px;
   padding: 10px 15px;
-  background-color: #7e57c2; /* Fondo lila */
+  background-color: #00dfa0; /* Fondo verde agua */
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -109,7 +105,7 @@
 }
 
 .btn-whatsapp:hover {
-  background-color: #4a148c; /* Fondo lila oscuro */
+  background-color: #009e75; /* Fondo verde agua más oscuro */
 }
 
 .whatsapp-icon {
@@ -121,6 +117,7 @@
 .logo-container {
   cursor: pointer;
   display: inline-block;
+  margin-top: -10px;
 }
 
 .logo-container img {

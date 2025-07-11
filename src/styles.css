@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 75px;
-  background-color: #4a148c; /* Fondo lila oscuro */
+  background: linear-gradient(45deg, #00dfa0, #009e75); /* Gradiente verde agua */
   color: white; /* Texto blanco */
   display: flex;
   justify-content: space-between;
@@ -15,6 +15,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   min-width: 110px;
 }
+
 
 /* Estilo del logo */
 .logo-container img {
@@ -165,18 +166,19 @@ body {
   app-root {
     flex: 1;
   }
-  footer {
-    background-color: #4a148c; /* Fondo lila oscuro */
-    color: white; /* Texto blanco */
-    padding: 20px 0;
-    text-align: center;
-    font-size: 14px;
-    width: 100%;
-    margin-top: auto;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
+ footer {
+  background: linear-gradient(45deg, #00dfa0, #009e75); /* Gradiente verde agua */
+  color: white; /* Texto blanco */
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
   .footer-content {
     max-width: 1200px;
     width: 100%;

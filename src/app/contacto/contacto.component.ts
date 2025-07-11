@@ -21,10 +21,10 @@ import { RouterModule } from '@angular/router';
 export class ContactoComponent implements OnInit, AfterViewInit {
   searchTerm: string = '';
   selectedCategory: string = '';
-  categorias: string[] = ['Asunción', 'CDE'];
+  categorias: string[] = ['Asunción'];
   whatsappLinks: { [key: string]: string } = {
-    Asunción: 'https://wa.me/595983777510',
-    CDE: 'https://wa.me/595983777505',
+    Asunción: 'https://wa.me/595992315555',
+   // CDE: 'https://wa.me/',
   };
 
   isLoading: boolean = true; // Controla la visibilidad del preloader
