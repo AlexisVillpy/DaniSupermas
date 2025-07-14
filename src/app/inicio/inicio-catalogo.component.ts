@@ -54,12 +54,14 @@ export class InicioCatalogoComponent implements OnInit, AfterViewInit {
   cargarProductos(): void {
     if (isPlatformBrowser(this.platformId)) { // Verificar si estamos en el navegador
       this.isLoading = true;
-      this.http.get<any[]>('/DaniSupermas/assets/productos.json').subscribe({
+      this.http.get<any[]>('assets/productos.json')
+.subscribe({
         next: (response) => {
           if (response && response.length > 0) {
             this.productos = response.map(producto => ({
               ...producto,
-              foto: `/DaniSupermas/${producto.foto}` // Ajustar la ruta de las imágenes
+              foto: `${producto.foto}`
+ // Ajustar la ruta de las imágenes
             }));
             this.productosFiltrados = this.productos;
           } else {
