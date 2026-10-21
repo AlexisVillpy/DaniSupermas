@@ -1,17 +1,16 @@
 {
   "name": "DaniSupermas",
   "version": "0.0.0",
-"scripts": {
-  "ng": "ng",
-  "start": "ng serve",
-  "build": "ng build",
-  "watch": "ng build --watch --configuration development",
-  "test": "ng test",
-  "lint": "eslint . --ext .js,.ts",
-  "serve:ssr:DaniSupermas": "node dist/DaniSupermas/server/server.mjs",
-  "deploy": "ng build --prod --base-href \"/DaniSupermas/\" && npx angular-cli-ghpages --dir=dist/DaniSupermas"
-},
-
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "lint": "eslint . --ext .js,.ts",
+    "serve:ssr:DaniSupermas": "node dist/DaniSupermas/server/server.mjs",
+    "deploy": "ng build --prod --base-href \"/DaniSupermas/\" && npx angular-cli-ghpages --dir=dist/DaniSupermas"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.0.5",
@@ -26,15 +25,7 @@
     "@angular/platform-server": "^19.0.0",
     "@angular/router": "^19.0.0",
     "@angular/ssr": "^19.0.2",
-    "@babel/runtime": "^7.27.1",
-    "axios": "^1.7.9",
-    "cors": "^2.8.5",
-    "ejs": "^3.1.10",
-    "esbuild": "^0.25.4",
     "express": "^4.18.2",
-    "firebase-functions": "^6.3.2",
-    "http-proxy-middleware": "^3.0.5",
-    "jspdf": "^3.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -48,7 +39,6 @@
     "@types/node": "^18.18.0",
     "angular-cli-ghpages": "^2.0.3",
     "eslint": "^9.20.1",
-    "gh-pages": "^6.3.0",
     "jasmine-core": "~5.4.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
