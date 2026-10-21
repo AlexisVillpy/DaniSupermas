@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
@@ -14,11 +14,10 @@ import { ListaService } from '../lista.service';
   styleUrls: ['./inicio-catalogo.component.css'],
   imports: [
     HttpClientModule,
-    CommonModule,
     FormsModule,
     MatIconModule,
-    RouterModule,
-  ],
+    RouterModule
+],
 })
 export class InicioCatalogoComponent implements OnInit, AfterViewInit {
   productos: any[] = []; // Lista de productos

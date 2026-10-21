@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
@@ -12,11 +12,10 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./contacto.component.css'],
   imports: [
     HttpClientModule,
-    CommonModule,
     FormsModule,
     MatIconModule,
-    RouterModule,
-  ],
+    RouterModule
+],
 })
 export class ContactoComponent implements OnInit, AfterViewInit {
   searchTerm: string = '';

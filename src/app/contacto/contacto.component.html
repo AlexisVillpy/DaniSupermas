@@ -1,66 +1,76 @@
 <base href="/" />
 
 <!-- Preloader -->
-<div *ngIf="isLoading" id="preloader">
-  <div class="spinner"></div>
-</div>
+@if (isLoading) {
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+}
 
 <!-- El contenido real de la página -->
-<div *ngIf="!isLoading">
-  <!-- Banner con logo como botón de redirección (solo en la página de contacto) -->
-  <div *ngIf="isContactPage" class="banner">
-    <a href="/inicio" class="logo-container">
-      <img src="assets/fotos-productos/LOGO-EMPRESA.webp" alt="Logo Mave" />
-    </a>
-
-      <!-- Flecha doblada hacia atrás -->
-  <a class="back-icon" [routerLink]="'/inicio'" aria-label="Volver">
-    <mat-icon>arrow_back</mat-icon>
-    Volver
-  </a>
-  
-  </div>
-
-  <!-- Catálogo -->
-  <div class="catalogo-container">
-    <h2 class="title">
-      <mat-icon>phone</mat-icon>
-      Contactos
-    </h2>
-  </div>
-
-  <!-- Desplegable Categorías -->
-  <div class="dropdown-container">
-    <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
-      <option value="">Seleccione sede...</option>
-      <option *ngFor="let categoria of categorias" [value]="categoria">
-        {{ categoria }}
-      </option>
-    </select>
-  </div>
-
-  <!-- Mensajes y botón de WhatsApp -->
-  <div class="whatsapp-container">
-    <p *ngIf="!selectedCategory">
-      Seleccione una sede para obtener el contacto de WhatsApp...
-    </p>
-    <div *ngIf="selectedCategory">
-      <p *ngIf="getWhatsAppLink()">
-        Contacto de WhatsApp para {{ selectedCategory }}:
-      </p>
-      <a
-        *ngIf="getWhatsAppLink()"
-        [href]="getWhatsAppLink()"
-        target="_blank"
-        class="btn-whatsapp"
-      >
-        <img
-          src="assets/fotos-productos/WhatsApp.webp"
-          alt="WhatsApp"
-          class="whatsapp-icon"
-        />
-        Ir al chat de WhatsApp
-      </a>
+@if (!isLoading) {
+  <div>
+    <!-- Banner con logo como botón de redirección (solo en la página de contacto) -->
+    @if (isContactPage) {
+      <div class="banner">
+        <a href="/inicio" class="logo-container">
+          <img src="assets/fotos-productos/LOGO-EMPRESA.webp" alt="Logo Mave" />
+        </a>
+        <!-- Flecha doblada hacia atrás -->
+        <a class="back-icon" [routerLink]="'/inicio'" aria-label="Volver">
+          <mat-icon>arrow_back</mat-icon>
+          Volver
+        </a>
+      </div>
+    }
+    <!-- Catálogo -->
+    <div class="catalogo-container">
+      <h2 class="title">
+        <mat-icon>phone</mat-icon>
+        Contactos
+      </h2>
     </div>
-  </div>
-</div>
+    <!-- Desplegable Categorías -->
+    <div class="dropdown-container">
+      <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
+        <option value="">Seleccione sede...</option>
+        @for (categoria of categorias; track categoria) {
+          <option [value]="categoria">
+            {{ categoria }}
+          </option>
+        }
+      </select>
+    </div>
+    <!-- Mensajes y botón de WhatsApp -->
+    <div class="whatsapp-container">
+      @if (!selectedCategory) {
+        <p>
+          Seleccione una sede para obtener el contacto de WhatsApp...
+        </p>
+      }
+      @if (selectedCategory) {
+        <div>
+          @if (getWhatsAppLink()) {
+            <p>
+              Contacto de WhatsApp para {{ selectedCategory }}:
+            </p>
+          }
+          @if (getWhatsAppLink()) {
+            <a
+              [href]="getWhatsAppLink()"
+              target="_blank"
+              class="btn-whatsapp"
+              >
+              <img
+                src="assets/fotos-productos/WhatsApp.webp"
+                alt="WhatsApp"
+                class="whatsapp-icon"
+                />
+                Ir al chat de WhatsApp
+              </a>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  }

@@ -1,129 +1,135 @@
 <base href="/" />
 
 <!-- Preloader -->
-<div *ngIf="isLoading" id="preloader">
-  <div class="spinner"></div>
-</div>
-
-<div *ngIf="!isLoading">
-  <!-- Banner -->
-  <div class="banner">
-    <!-- Contenedor del logo principal -->
-    <div class="logo-container">
-      <a href="javascript:void(0)" (click)="scrollToTop()"> <!-- Llamar a la función de desplazamiento -->
-        <img src="assets/fotos-productos/LOGO-EMPRESA.webp" alt="Logo Mave" />
-      </a>
-    </div>
-
-    <!-- Botón de contacto -->
-    <div class="phone-button-container">
-      <button
-        mat-raised-button
-        color="primary"
-        class="phone-button"
-        [routerLink]="'/contacto'"
-      >
-        <mat-icon>phone</mat-icon>
-      </button>
-    </div>
+@if (isLoading) {
+  <div id="preloader">
+    <div class="spinner"></div>
   </div>
+}
 
-  <!-- Catálogo -->
-  <div class="catalogo-container">
-    <!-- Título del catálogo -->
-    <h2 class="title">
-      <mat-icon>format_align_justify</mat-icon>
-      Catálogo de Productos
-    </h2>
-
-    <!-- Contenedor de búsqueda y categorías -->
-    <div class="search-categories-container">
-      <!-- Input de búsqueda -->
-      <div class="search-container">
-        <mat-icon class="search-icon">search</mat-icon>
-        <input
-          type="text"
-          [(ngModel)]="searchTerm"
-          (input)="filtrarProductos()"
-          placeholder="Buscar productos..."
-          class="search-input"
-        />
+@if (!isLoading) {
+  <div>
+    <!-- Banner -->
+    <div class="banner">
+      <!-- Contenedor del logo principal -->
+      <div class="logo-container">
+        <a href="javascript:void(0)" (click)="scrollToTop()"> <!-- Llamar a la función de desplazamiento -->
+          <img src="assets/fotos-productos/LOGO-EMPRESA.webp" alt="Logo Mave" />
+        </a>
       </div>
-
-      <!-- Contenedor para los filtros -->
-      <div class="dropdown-group">
-        <!-- Desplegable de colores -->
-        <div class="dropdown-container colores">
-          <select class="category-dropdown" [(ngModel)]="selectedCategory" (change)="filtrarProductos()">
-            <option value="">Colores</option>
-            <option *ngFor="let categoria of categorias" [value]="categoria">
-              {{ categoria }}
-            </option>
-          </select>
+      <!-- Botón de contacto -->
+      <div class="phone-button-container">
+        <button
+          mat-raised-button
+          color="primary"
+          class="phone-button"
+          [routerLink]="'/contacto'"
+          >
+          <mat-icon>phone</mat-icon>
+        </button>
+      </div>
+    </div>
+    <!-- Catálogo -->
+    <div class="catalogo-container">
+      <!-- Título del catálogo -->
+      <h2 class="title">
+        <mat-icon>format_align_justify</mat-icon>
+        Catálogo de Productos
+      </h2>
+      <!-- Contenedor de búsqueda y categorías -->
+      <div class="search-categories-container">
+        <!-- Input de búsqueda -->
+        <div class="search-container">
+          <mat-icon class="search-icon">search</mat-icon>
+          <input
+            type="text"
+            [(ngModel)]="searchTerm"
+            (input)="filtrarProductos()"
+            placeholder="Buscar productos..."
+            class="search-input"
+            />
+          </div>
+          <!-- Contenedor para los filtros -->
+          <div class="dropdown-group">
+            <!-- Desplegable de colores -->
+            <div class="dropdown-container colores">
+              <select class="category-dropdown" [(ngModel)]="selectedCategory" (change)="filtrarProductos()">
+                <option value="">Colores</option>
+                @for (categoria of categorias; track categoria) {
+                  <option [value]="categoria">
+                    {{ categoria }}
+                  </option>
+                }
+              </select>
+            </div>
+            <!-- Desplegable de materiales -->
+            <div class="dropdown-container materiales">
+              <select class="order-dropdown" [(ngModel)]="selectedMaterial" (change)="filtrarProductos()">
+                <option value="">Materiales</option>
+                @for (material of materiales; track material) {
+                  <option [value]="material">
+                    {{ material }}
+                  </option>
+                }
+              </select>
+            </div>
+            <!-- Desplegable de litros -->
+            <div class="dropdown-container litros">
+              <select class="order-dropdown" [(ngModel)]="selectedLitros" (change)="filtrarProductos()">
+                <option value="">Litros</option>
+                @for (litro of litros; track litro) {
+                  <option [value]="litro">
+                    {{ litro }}
+                  </option>
+                }
+              </select>
+            </div>
+          </div>
         </div>
-
-        <!-- Desplegable de materiales -->
-        <div class="dropdown-container materiales">
-          <select class="order-dropdown" [(ngModel)]="selectedMaterial" (change)="filtrarProductos()">
-            <option value="">Materiales</option>
-            <option *ngFor="let material of materiales" [value]="material">
-              {{ material }}
-            </option>
-          </select>
-        </div>
-
-        <!-- Desplegable de litros -->
-        <div class="dropdown-container litros">
-          <select class="order-dropdown" [(ngModel)]="selectedLitros" (change)="filtrarProductos()">
-            <option value="">Litros</option>
-            <option *ngFor="let litro of litros" [value]="litro">
-              {{ litro }}
-            </option>
-          </select>
+        <!-- Mensaje de carga -->
+        @if (productosFiltrados.length === 0) {
+          <div>
+            <p class="loading-text">No se encontraron productos.</p>
+          </div>
+        }
+        <!-- Modal para detalles del producto -->
+        @if (selectedProduct) {
+          <div>
+            <!-- Fondo oscuro -->
+            <div class="modal-overlay" (click)="cerrarModal()"></div>
+            <!-- Ventana modal -->
+            <div class="modal">
+              <div class="modal-content">
+                <span class="close-button" (click)="cerrarModal()">&times;</span>
+                <img [src]="selectedProduct.foto" alt="{{ selectedProduct.nombre }}" class="modal-image" />
+                <h3>{{ selectedProduct.nombre }}</h3>
+                <p><strong>Material:</strong> {{ selectedProduct.material }}</p>
+                <p><strong>Medidas:</strong> {{ selectedProduct.medidas }}</p>
+                <p><strong>Peso gr/u:</strong> {{ selectedProduct['peso gr/u'] }}</p>
+                <p><strong>Color:</strong> {{ selectedProduct.color }}</p>
+              </div>
+            </div>
+          </div>
+        }
+        <!-- Contenedor de tarjetas -->
+        <div class="container">
+          @for (producto of productosFiltrados; track producto) {
+            <div class="card">
+              <div class="image-container">
+                <!-- Imagen de producto -->
+                <img [src]="producto.foto" alt="{{ producto.nombre }}" />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">{{ producto.nombre }}</h3>
+                <p class="card-box">Código: {{ producto.codigo }}</p>
+                <p class="card-box">Unidades: {{ producto.caja }}</p>
+                <button (click)="verDetalles(producto)">
+                  Detalle
+                </button>
+              </div>
+            </div>
+          }
         </div>
       </div>
     </div>
-
-    <!-- Mensaje de carga -->
-    <div *ngIf="productosFiltrados.length === 0">
-      <p class="loading-text">No se encontraron productos.</p>
-    </div>
-
-    <!-- Modal para detalles del producto -->
-    <div *ngIf="selectedProduct">
-      <!-- Fondo oscuro -->
-      <div class="modal-overlay" (click)="cerrarModal()"></div>
-      
-      <!-- Ventana modal -->
-      <div class="modal">
-        <div class="modal-content">
-          <span class="close-button" (click)="cerrarModal()">&times;</span>
-          <img [src]="selectedProduct.foto" alt="{{ selectedProduct.nombre }}" class="modal-image" />
-          <h3>{{ selectedProduct.nombre }}</h3>
-          <p><strong>Material:</strong> {{ selectedProduct.material }}</p>
-          <p><strong>Medidas:</strong> {{ selectedProduct.medidas }}</p>
-          <p><strong>Peso gr/u:</strong> {{ selectedProduct['peso gr/u'] }}</p>
-          <p><strong>Color:</strong> {{ selectedProduct.color }}</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contenedor de tarjetas -->
-    <div class="container">
-      <div *ngFor="let producto of productosFiltrados" class="card">
-        <div class="image-container">
-          <!-- Imagen de producto -->
-          <img [src]="producto.foto" alt="{{ producto.nombre }}" />
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">{{ producto.nombre }}</h3>
-          <p class="card-box">Código: {{ producto.codigo }}</p>
-          <p class="card-box">Unidades: {{ producto.caja }}</p>
-          <button (click)="verDetalles(producto)">
-            Detalle
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  }
