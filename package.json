@@ -8,8 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "eslint . --ext .js,.ts",
-    "serve:ssr:DaniSupermas": "node dist/DaniSupermas/server/server.mjs",
-    "deploy": "ng build --prod --base-href \"/DaniSupermas/\" && npx angular-cli-ghpages --dir=dist/DaniSupermas"
+    "serve:ssr:DaniSupermas": "node dist/DaniSupermas/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -31,20 +30,18 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^21.2.27",
+    "@angular/build": "^21.2.27",
     "@angular/cli": "^21.2.27",
     "@angular/compiler-cli": "^21.2.25",
     "@types/express": "^4.17.17",
-    "@types/jasmine": "~5.1.0",
-    "@types/node": "^18.18.0",
-    "angular-cli-ghpages": "^2.0.3",
+    "@types/node": "^22.20.5",
     "eslint": "^9.20.1",
-    "jasmine-core": "~5.4.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.9.3"
+    "jsdom": "^29.1.1",
+    "typescript": "~5.9.3",
+    "vitest": "^4.1.11"
+  },
+  "overrides": {
+    "vite": "^7.3.7",
+    "@modelcontextprotocol/sdk": "^1.32.1"
   }
 }
